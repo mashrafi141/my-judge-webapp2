@@ -15,7 +15,7 @@ from telegram.ext import (
 from telegram import Update
 from telegram.error import NetworkError
 
-# ✅ Load handlers
+# ✅ Handlers
 from handlers.start import start
 from handlers.problems import problems_cmd, problems_pagination_callback
 from handlers.register import register_cmd
@@ -26,7 +26,7 @@ from handlers.profile import profile_cmd
 from handlers.rankings import rankings_cmd, rankings_pagination_callback
 from handlers.problem_details import problem_details_cmd
 
-# ✅ Load env
+# ✅ Env
 load_dotenv()
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 
@@ -38,9 +38,8 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
-# ✅ Global error handler
 async def error_handler(update: object, context: ContextTypes.DEFAULT_TYPE) -> None:
-    logger.error(msg="Exception while handling an update:", exc_info=context.error)
+    logger.error("Exception while handling an update:", exc_info=context.error)
     if isinstance(context.error, NetworkError):
         if isinstance(update, Update) and update.message:
             try:
@@ -49,7 +48,6 @@ async def error_handler(update: object, context: ContextTypes.DEFAULT_TYPE) -> N
                 logger.error(f"Failed to send network error message: {e}")
 
 
-# ✅ Start judge workers (async background)
 async def start_workers(app):
     for _ in range(3):
         asyncio.create_task(judge_worker())
@@ -75,7 +73,7 @@ def build_app():
     app.add_handler(CommandHandler("profile", profile_cmd))
     app.add_handler(CommandHandler("rankings", rankings_cmd))
 
-    # ✅ Pagination
+    # ✅ Pagination callbacks
     app.add_handler(CallbackQueryHandler(problems_pagination_callback, pattern=r"^problems_page_\d+$"))
     app.add_handler(CallbackQueryHandler(history_pagination_callback, pattern=r"^history_page_\d+$"))
     app.add_handler(CallbackQueryHandler(rankings_pagination_callback, pattern=r"^rankings_page_\d+$"))
@@ -85,26 +83,47 @@ def build_app():
 
     # ✅ Errors
     app.add_error_handler(error_handler)
+
     return app
 
 
-def run_bot():
+async def _run_bot_async():
     """
-    Called by keep_alive.py in background thread.
+    Proper async init + webhook delete + polling
     """
     if not BOT_TOKEN:
-        print("❌ BOT_TOKEN is missing. Set it in Render Environment Variables.")
+        print("❌ BOT_TOKEN missing. Set it in Render Environment Variables.")
         return
 
     app = build_app()
 
-    print("🤖 Bot started (polling)...")
+    print("🤖 Bot starting (polling)...")
 
-    # ✅ Must disable webhook to avoid conflicts
+    # ✅ Proper initialize
+    await app.initialize()
+
+    # ✅ Disable webhook (async)
     try:
-        app.bot.delete_webhook(drop_pending_updates=True)
+        await app.bot.delete_webhook(drop_pending_updates=True)
         print("✅ Webhook removed (polling mode)")
     except Exception as e:
         print("⚠️ Webhook remove failed:", e)
 
-    app.run_polling(close_loop=False)
+    # ✅ Start application
+    await app.start()
+    await app.updater.start_polling()
+
+    print("✅ Bot is running!")
+
+    # ✅ Keep running forever
+    await asyncio.Event().wait()
+
+
+def run_bot():
+    """
+    Called from keep_alive.py inside a background thread
+    """
+    try:
+        asyncio.run(_run_bot_async())
+    except Exception as e:
+        print("❌ Bot crashed:", e)
