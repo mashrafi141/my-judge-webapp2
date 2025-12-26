@@ -1,35 +1,47 @@
 """
-keep_alive.py (PRODUCTION / Render Ready)
-- Flask WebApp + API
-- Background job queue (non-blocking submissions)
-- Telegram bot runs in background thread (when running under gunicorn)
-- Compatible with Render Free Plan (single service)
+keep_alive.py (FINAL - Render + Gunicorn + Telegram WebApp + Bot Thread)
+
+Features:
+- Health endpoints: / , /ping
+- Telegram WebApp SPA: /webapp + /webapp/<assets>
+- REST API: /api/*
+- Non-blocking submissions: background job queue + polling
+- Telegram bot runs in background thread (works with gunicorn)
+- Problems sorted by ID ascending
+- MongoDB user db logic unchanged (user_utils.py)
+- Problem JSON format unchanged
+- Render free plan compatible (single web service, no Docker)
 """
 
 from __future__ import annotations
+
 import os
 import threading
 from flask import Flask, jsonify, request, send_from_directory
 
-# Existing logic
+# Reuse existing logic
 from utils.problem_utils import load_all_problems, find_problem_by_id
 import user_utils
-from handlers.submit import run_code
 
-# Job queue
+from handlers.submit import run_code  # existing local runner
+
+# Job queue utilities (your existing module)
 from utils.job_queue import create_job, get_job, start_worker_once
+
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 WEBAPP_DIR = os.path.join(BASE_DIR, "webapp")
 
 app = Flask(__name__, static_folder=WEBAPP_DIR)
 
-# =========================
-# ✅ Background Worker logic
-# =========================
+# =====================================
+# ✅ Background worker: judge submissions
+# =====================================
 def _process_submission_job(payload: dict):
     """
-    Judge code using hidden testcases (same logic as telegram bot submit)
+    Judge code using existing runner + hidden testcases.
+    Same logic as telegram submit.
+    Runs in background queue worker (non-blocking).
     """
     pid = int(payload["problem_id"])
     lang = payload["language"]
@@ -45,7 +57,7 @@ def _process_submission_job(payload: dict):
     for tc in prob.get("test_cases", []):
         out = run_code(lang, code, tc.get("input", ""))
 
-        # runner error
+        # runtime error/timeouts (your runner returns ⚠️ / ⏰ etc)
         if isinstance(out, str) and out.startswith(("⚠️", "⏰", "❗")):
             return {"ok": False, "verdict": out}
 
@@ -56,47 +68,49 @@ def _process_submission_job(payload: dict):
             expected_set = sorted([x.strip() for x in expected.splitlines() if x.strip()])
             actual_set = sorted([x.strip() for x in actual.splitlines() if x.strip()])
             if expected_set != actual_set:
-                return {
-                    "ok": True,
-                    "verdict": "WA",
-                    "expected": expected,
-                    "actual": actual
-                }
+                return {"ok": True, "verdict": "WA", "expected": expected, "actual": actual}
         else:
             if expected != actual:
-                return {
-                    "ok": True,
-                    "verdict": "WA",
-                    "expected": expected,
-                    "actual": actual
-                }
+                return {"ok": True, "verdict": "WA", "expected": expected, "actual": actual}
 
-    # ✅ AC update
+    # ✅ Accepted
     user_utils.update_user_score(uid, prob.get("points", 1))
     user_utils.add_solved_problem(uid, pid)
 
     return {"ok": True, "verdict": "AC"}
 
 
-# ✅ Start worker only once (safe with gunicorn threads)
+# =====================================
+# ✅ Ensure workers start only once
+# =====================================
 _WORKER_STARTED = False
+
 def ensure_workers():
+    """
+    Starts job queue worker threads once.
+    IMPORTANT: use positional arguments for compatibility
+    because start_worker_once signature may differ.
+    """
     global _WORKER_STARTED
     if _WORKER_STARTED:
         return
-    start_worker_once(_process_submission_job, num_workers=3)
+
+    # ✅ FIX: don't use num_workers kwarg (your error)
+    start_worker_once(_process_submission_job, 3)
+
     _WORKER_STARTED = True
     print("🚀 Judge workers started!")
 
 
-# =========================
-# ✅ Telegram Bot background
-# =========================
+# =====================================
+# ✅ Telegram bot background thread
+# =====================================
 _BOT_STARTED = False
+
 def start_bot_background():
     """
-    Start bot polling in a background thread.
-    Only runs when LOCAL_MODE != 1
+    Starts Telegram bot polling in background thread.
+    Requires my_bot_runner.py with run_bot().
     """
     global _BOT_STARTED
     if _BOT_STARTED:
@@ -119,9 +133,9 @@ def start_bot_background():
     print("🤖 Bot started in background thread!")
 
 
-# =========================
-# Health
-# =========================
+# =====================================
+# ✅ Basic health checks
+# =====================================
 @app.route("/")
 def home():
     return "I am alive!", 200
@@ -131,9 +145,9 @@ def ping():
     return "pong", 200
 
 
-# =========================
-# WebApp
-# =========================
+# =====================================
+# ✅ WebApp (static SPA)
+# =====================================
 @app.route("/webapp")
 def webapp_index():
     return send_from_directory(WEBAPP_DIR, "index.html")
@@ -143,9 +157,9 @@ def webapp_assets(path: str):
     return send_from_directory(WEBAPP_DIR, path)
 
 
-# =========================
-# Auth Helper
-# =========================
+# =====================================
+# ✅ Helpers (auth)
+# =====================================
 def get_user_id_from_request() -> int | None:
     uid = request.headers.get("X-User-Id") or request.args.get("user_id")
     if not uid:
@@ -162,18 +176,18 @@ def require_user() -> int:
     return uid
 
 
-# =========================
-# Problems API (sorted ✅)
-# =========================
+# =====================================
+# ✅ API: Problems (sorted by id)
+# =====================================
 @app.get("/api/problems")
 def api_problems():
     problems = load_all_problems()
-    problems.sort(key=lambda x: int(x.get("id", 0)))  # ✅ sort ascending
+    problems.sort(key=lambda x: int(x.get("id", 0)))  # ✅ ascending
 
     lite = []
     for p in problems:
         pp = dict(p)
-        pp.pop("test_cases", None)
+        pp.pop("test_cases", None)  # remove hidden testcases
         lite.append(pp)
 
     return jsonify({"ok": True, "problems": lite})
@@ -186,13 +200,13 @@ def api_problem(pid: int):
         return jsonify({"ok": False, "error": "Problem not found"}), 404
 
     safe_prob = dict(prob)
-    safe_prob.pop("test_cases", None)
+    safe_prob.pop("test_cases", None)  # don't expose hidden testcases
     return jsonify({"ok": True, "problem": safe_prob})
 
 
-# =========================
-# Profile/History/Rankings
-# =========================
+# =====================================
+# ✅ API: Profile / History / Rankings
+# =====================================
 @app.get("/api/profile")
 def api_profile():
     try:
@@ -221,17 +235,20 @@ def api_rankings():
     return jsonify({"ok": True, "rankings": rankings})
 
 
-# =========================
-# Run + Submit (Non Blocking ✅)
-# =========================
+# =====================================
+# ✅ API: Run (custom input)
+# =====================================
 @app.post("/api/run")
 def api_run():
     """
-    Run code with custom input (no judge).
-    Frontend sends: { language, code, stdin }
+    Frontend sends:
+      { user_id, language, code, stdin }
+    Support also old keys:
+      { lang, input }
     """
     try:
         payload = request.get_json(force=True)
+
         lang = payload.get("language") or payload.get("lang")
         code = payload.get("code", "")
         stdin = payload.get("stdin") or payload.get("input") or ""
@@ -242,15 +259,20 @@ def api_run():
         return jsonify({"ok": False, "error": str(e)}), 400
 
 
+# =====================================
+# ✅ API: Submit (non-blocking queue)
+# =====================================
 @app.post("/api/submit")
 def api_submit():
     """
     Non-blocking submit:
-    - enqueue a job
+    - enqueue job
     - return job_id immediately
+    Frontend will poll /api/job/<id>
     """
     try:
         ensure_workers()
+
         uid = require_user()
         user_utils.ensure_user_initialized(uid)
 
@@ -263,6 +285,7 @@ def api_submit():
         if not prob:
             return jsonify({"ok": False, "error": "Problem not found"}), 404
 
+        # ✅ enqueue job
         job_id = create_job({
             "user_id": uid,
             "problem_id": pid,
@@ -270,10 +293,10 @@ def api_submit():
             "code": code,
         })
 
-        # Save submission record as queued
+        # save queued submission in DB
         user_utils.save_submission(uid, {
             "problem_id": pid,
-            "problem_name": prob.get("name", "Unknown Problem"),
+            "problem_name": prob.get("name", prob.get("title", "Unknown Problem")),
             "verdict": "QUEUED",
             "lang": lang,
         })
@@ -283,19 +306,24 @@ def api_submit():
         return jsonify({"ok": False, "error": str(e)}), 400
 
 
+# =====================================
+# ✅ API: Job polling
+# =====================================
 @app.get("/api/job/<job_id>")
 def api_job(job_id: str):
-    """
-    Job polling endpoint
-    """
     j = get_job(job_id)
     if not j:
         return jsonify({"ok": False, "error": "Job not found"}), 404
-    return jsonify({"ok": True, "status": j["status"], "result": j.get("result"), "error": j.get("error")})
+    return jsonify({
+        "ok": True,
+        "status": j["status"],
+        "result": j.get("result"),
+        "error": j.get("error")
+    })
 
 
-# =========================
-# Start bot + workers on import (gunicorn)
-# =========================
+# =====================================
+# ✅ Run these when keep_alive is imported (gunicorn)
+# =====================================
 ensure_workers()
 start_bot_background()
