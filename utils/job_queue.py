@@ -1,63 +1,110 @@
+"""
+utils/job_queue.py
 
-import threading
-import queue
+In-memory async job queue for judging submissions.
+✅ Fixed: start_worker_once now supports multiple workers safely.
+
+- create_job(payload) -> job_id
+- get_job(job_id) -> job dict
+- start_worker_once(process_fn, workers=3) -> starts background workers (only once)
+"""
+
+from __future__ import annotations
+
 import time
 import uuid
+import queue
+import threading
+from typing import Any, Callable, Dict, Optional
 
-# In-memory async job queue (Render free friendly)
-_job_q = queue.Queue()
-_job_store = {}
-_lock = threading.Lock()
+
+# ---------------------------
+# In-memory job store + queue
+# ---------------------------
+_jobs: Dict[str, Dict[str, Any]] = {}
+_job_queue: "queue.Queue[str]" = queue.Queue()
+
 _worker_started = False
+_worker_lock = threading.Lock()
 
+
+# ---------------------------
+# Public API
+# ---------------------------
 def create_job(payload: dict) -> str:
-    """Create a job and enqueue it. Returns job_id."""
-    job_id = uuid.uuid4().hex
-    with _lock:
-        _job_store[job_id] = {
-            "status": "queued",
-            "created_at": time.time(),
-            "updated_at": time.time(),
-            "payload": payload,
-            "result": None,
-            "error": None,
-        }
-    _job_q.put(job_id)
+    """
+    Enqueue a job and return its id
+    """
+    job_id = str(uuid.uuid4())
+    _jobs[job_id] = {
+        "id": job_id,
+        "status": "queued",
+        "payload": payload,
+        "result": None,
+        "error": None,
+        "created_at": time.time(),
+    }
+    _job_queue.put(job_id)
     return job_id
 
-def get_job(job_id: str):
-    with _lock:
-        return _job_store.get(job_id)
 
-def update_job(job_id: str, **kwargs):
-    with _lock:
-        job = _job_store.get(job_id)
-        if not job:
-            return
-        job.update(kwargs)
-        job["updated_at"] = time.time()
+def get_job(job_id: str) -> Optional[dict]:
+    return _jobs.get(job_id)
 
-def _worker_loop(process_fn):
-    while True:
-        job_id = _job_q.get()
-        if job_id is None:
-            break
-        job = get_job(job_id)
-        if not job:
-            continue
-        update_job(job_id, status="running")
-        try:
-            res = process_fn(job["payload"])
-            update_job(job_id, status="done", result=res, error=None)
-        except Exception as e:
-            update_job(job_id, status="error", error=str(e))
-        finally:
-            _job_q.task_done()
 
-def start_worker_once(process_fn):
+def start_worker_once(process_fn: Callable[[dict], dict], workers: int = 3):
+    """
+    ✅ Starts job worker threads only once.
+    Backward compatible:
+      start_worker_once(fn)          -> uses default workers=3
+      start_worker_once(fn, workers=2)
+    """
     global _worker_started
-    if _worker_started:
-        return
-    t = threading.Thread(target=_worker_loop, args=(process_fn,), daemon=True)
-    t.start()
-    _worker_started = True
+
+    # ✅ Thread-safe: prevent multiple starts
+    with _worker_lock:
+        if _worker_started:
+            return
+
+        # Workers sanity (Render free plan friendly)
+        if not isinstance(workers, int) or workers < 1:
+            workers = 1
+        if workers > 4:  # safe cap
+            workers = 4
+
+        for i in range(workers):
+            t = threading.Thread(
+                target=_worker_loop,
+                args=(process_fn,),
+                daemon=True,
+                name=f"job-worker-{i+1}"
+            )
+            t.start()
+
+        _worker_started = True
+
+
+# ---------------------------
+# Worker loop
+# ---------------------------
+def _worker_loop(process_fn: Callable[[dict], dict]):
+    """
+    Continuously processes queued jobs.
+    """
+    while True:
+        job_id = _job_queue.get()
+        job = _jobs.get(job_id)
+        if not job:
+            _job_queue.task_done()
+            continue
+
+        job["status"] = "running"
+        try:
+            result = process_fn(job["payload"])
+            job["result"] = result
+            job["status"] = "done"
+        except Exception as e:
+            job["error"] = str(e)
+            job["status"] = "error"
+        finally:
+            _job_queue.task_done()
