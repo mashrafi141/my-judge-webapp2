@@ -1,0 +1,582 @@
+[
+  {
+    "id": 81,
+    "name": "Find First Non-Repeated Character",
+    "category": "String",
+    "level": "Medium",
+    "description": "Given string S, find first char that occurs only once.\nExample:\nInput: aabbcd\nOutput: c\nExplanation: 'c' is first unique.",
+    "test_cases": [
+      {
+        "input": "aabbcd",
+        "output": "c"
+      },
+      {
+        "input": "aabbcc",
+        "output": ""
+      },
+      {
+        "input": "hello",
+        "output": "h"
+      },
+      {
+        "input": "",
+        "output": ""
+      },
+      {
+        "input": "swiss",
+        "output": "w"
+      }
+    ]
+  },
+  {
+    "id": 82,
+    "name": "Check Palindrome Sentence (Ignore Spaces)",
+    "category": "String",
+    "level": "Medium",
+    "description": "Check if sentence is palindrome ignoring spaces and cases.\nExample:\nInput: A man a plan a canal Panama\nOutput: Yes\nExplanation: ignoring spaces/case \u00e2\u2020\u2019 palindrome.",
+    "test_cases": [
+      {
+        "input": "A man a plan a canal Panama",
+        "output": "Yes"
+      },
+      {
+        "input": "hello world",
+        "output": "No"
+      },
+      {
+        "input": "",
+        "output": "Yes"
+      },
+      {
+        "input": "Race car",
+        "output": "Yes"
+      },
+      {
+        "input": "No lemon no melon",
+        "output": "Yes"
+      }
+    ]
+  },
+  {
+    "id": 83,
+    "name": "Count Substring Occurrences",
+    "category": "String",
+    "level": "Medium",
+    "description": "Given string S and sub T, count non-overlapping occurrences of T in S.\nExample:\nInput:\nabababa\naba\nOutput: 2\nExplanation: aba occurs at positions 0 and 4 non-overlapping.",
+    "test_cases": [
+      {
+        "input": "abababa\naba",
+        "output": "2"
+      },
+      {
+        "input": "aaaaa\naaa",
+        "output": "1"
+      },
+      {
+        "input": "hello\nll",
+        "output": "1"
+      },
+      {
+        "input": "aaaa\na",
+        "output": "4"
+      },
+      {
+        "input": "abc\nz",
+        "output": "0"
+      }
+    ]
+  },
+  {
+    "id": 84,
+    "name": "Remove Vowels from String",
+    "category": "String",
+    "level": "Medium",
+    "description": "Given string S, remove all vowels (both cases).\nExample:\nInput: hello\nOutput: hll\nExplanation: removed 'e' and 'o'.",
+    "test_cases": [
+      {
+        "input": "hello",
+        "output": "hll"
+      },
+      {
+        "input": "OpenAI",
+        "output": "pn"
+      },
+      {
+        "input": "AEIOUaeiou",
+        "output": ""
+      },
+      {
+        "input": "",
+        "output": ""
+      },
+      {
+        "input": "bcdf",
+        "output": "bcdf"
+      }
+    ]
+  },
+  {
+    "id": 85,
+    "name": "Check Rotation",
+    "category": "String",
+    "level": "Medium++",
+    "description": "Given two strings A and B, check if B is rotation of A.\nExample:\nInput:\nabcd\ndabc\nOutput: Yes\nExplanation: \"dabc\" is rotation of \"abcd\".",
+    "test_cases": [
+      {
+        "input": "abcd\ndabc",
+        "output": "Yes"
+      },
+      {
+        "input": "hello\nlohe",
+        "output": "Yes"
+      },
+      {
+        "input": "abc\ncabd",
+        "output": "No"
+      },
+      {
+        "input": "a\n\na",
+        "output": "Yes"
+      },
+      {
+        "input": "abc\nabc",
+        "output": "Yes"
+      }
+    ]
+  },
+  {
+    "id": 86,
+    "name": "Find Longest Common Prefix",
+    "category": "String",
+    "level": "Medium++",
+    "description": "Given array of strings, find longest common prefix.\nExample:\nInput:\n3\naaa\naaa\naab\nOutput: aa\nExplanation: \"aa\" is common start.",
+    "test_cases": [
+      {
+        "input": "3\naaa\naaa\naab",
+        "output": "aa"
+      },
+      {
+        "input": "2\nhello\nworld",
+        "output": ""
+      },
+      {
+        "input": "1\nsingle",
+        "output": "single"
+      },
+      {
+        "input": "3\nflower\nflow\nflight",
+        "output": "fl"
+      },
+      {
+        "input": "3\nabc\nabcd\nab",
+        "output": "ab"
+      }
+    ]
+  },
+  {
+    "id": 87,
+    "name": "Check Balanced Parentheses",
+    "category": "String",
+    "level": "Medium++",
+    "description": "Given string S of parentheses '()[]{}', check if balanced.\nExample:\nInput: ()[]{}\nOutput: Yes\nExplanation: All open-close match in correct order.",
+    "test_cases": [
+      {
+        "input": "()[]{}",
+        "output": "Yes"
+      },
+      {
+        "input": "([)]",
+        "output": "No"
+      },
+      {
+        "input": "{[()]}",
+        "output": "Yes"
+      },
+      {
+        "input": "",
+        "output": "Yes"
+      },
+      {
+        "input": "(((",
+        "output": "No"
+      }
+    ]
+  },
+  {
+    "id": 88,
+    "name": "Implement strstr()",
+    "category": "String",
+    "level": "Medium++",
+    "description": "Given S and T, return first index of T in S or -1.\nExample:\nInput:\nhello\nll\nOutput: 2\nExplanation: \"ll\" starts at index 2.",
+    "test_cases": [
+      {
+        "input": "hello\nll",
+        "output": "2"
+      },
+      {
+        "input": "aaaa\naaa",
+        "output": "0"
+      },
+      {
+        "input": "abc\nd",
+        "output": "-1"
+      },
+      {
+        "input": "\n",
+        "output": "0"
+      },
+      {
+        "input": "abc\n",
+        "output": "0"
+      }
+    ]
+  },
+  {
+    "id": 89,
+    "name": "Count Palindromic Substrings",
+    "category": "String",
+    "level": "Hard",
+    "description": "Given string S, count total palindromic substrings.\nExample:\nInput: aaa\nOutput: 6\nExplanation: substrings: \"a\",\"a\",\"a\",\"aa\",\"aa\",\"aaa\"",
+    "test_cases": [
+      {
+        "input": "aaa",
+        "output": "6"
+      },
+      {
+        "input": "abc",
+        "output": "3"
+      },
+      {
+        "input": "aba",
+        "output": "4"
+      },
+      {
+        "input": "",
+        "output": "0"
+      },
+      {
+        "input": "racecar",
+        "output": "10"
+      }
+    ]
+  },
+  {
+    "id": 90,
+    "name": "Longest Palindromic Substring",
+    "category": "String",
+    "level": "Hard",
+    "description": "Given S, find longest palindromic substring length.\nExample:\nInput: babad\nOutput: 3\nExplanation: \"bab\" or \"aba\".",
+    "test_cases": [
+      {
+        "input": "babad",
+        "output": "3"
+      },
+      {
+        "input": "cbbd",
+        "output": "2"
+      },
+      {
+        "input": "a",
+        "output": "1"
+      },
+      {
+        "input": "",
+        "output": "0"
+      },
+      {
+        "input": "aaa",
+        "output": "3"
+      }
+    ]
+  },
+  {
+    "id": 91,
+    "name": "Longest Substring Without Repeating",
+    "category": "String",
+    "level": "Hard",
+    "description": "Given string S, return length of longest substring without repeating chars.\nExample:\nInput: abcabcbb\nOutput: 3\nExplanation: \"abc\"",
+    "test_cases": [
+      {
+        "input": "abcabcbb",
+        "output": "3"
+      },
+      {
+        "input": "bbbbb",
+        "output": "1"
+      },
+      {
+        "input": "pwwkew",
+        "output": "3"
+      },
+      {
+        "input": "",
+        "output": "0"
+      },
+      {
+        "input": "abcdefghijklmnopqrstuvwxyz",
+        "output": "26"
+      }
+    ]
+  },
+  {
+    "id": 92,
+    "name": "Minimum Window Substring",
+    "category": "String",
+    "level": "Hard",
+    "description": "Given S and T, find minimum window in S containing all chars of T.\nExample:\nInput:\nADOBECODEBANC\nABC\nOutput: BANC\nExplanation: \"BANC\" covers A,B,C.",
+    "test_cases": [
+      {
+        "input": "ADOBECODEBANC\nABC",
+        "output": "BANC"
+      },
+      {
+        "input": "a\na",
+        "output": "a"
+      },
+      {
+        "input": "a\nb",
+        "output": ""
+      },
+      {
+        "input": "aa\naa",
+        "output": "aa"
+      },
+      {
+        "input": "ab\nA",
+        "output": ""
+      }
+    ]
+  },
+  {
+    "id": 93,
+    "name": "Wildcard Pattern Matching",
+    "category": "String",
+    "level": "Hard",
+    "description": "Given string S and pattern P (with ? and *), check if match.\nExample:\nInput:\nfile.txt\n*.txt\nOutput: Yes\nExplanation: '*.txt' matches 'file.txt'.",
+    "test_cases": [
+      {
+        "input": "file.txt\n*.txt",
+        "output": "Yes"
+      },
+      {
+        "input": "file.txt\nf?le.*",
+        "output": "Yes"
+      },
+      {
+        "input": "hello\nh*o",
+        "output": "Yes"
+      },
+      {
+        "input": "abc\n?b?",
+        "output": "Yes"
+      },
+      {
+        "input": "abc\na*d",
+        "output": "No"
+      }
+    ]
+  },
+  {
+    "id": 94,
+    "name": "Check if Two Strings are Equal",
+    "category": "String",
+    "level": "Easy",
+    "description": "Given two strings A and B, check if they are exactly the same.\nExample:\nInput:\nhello\nhello\nOutput: Yes\nExplanation: Both strings match exactly.",
+    "test_cases": [
+      {
+        "input": "hello\nhello",
+        "output": "Yes"
+      },
+      {
+        "input": "Hello\nhello",
+        "output": "No"
+      },
+      {
+        "input": "abc\nabc",
+        "output": "Yes"
+      },
+      {
+        "input": "abc\nabcd",
+        "output": "No"
+      },
+      {
+        "input": "\n",
+        "output": "Yes"
+      }
+    ]
+  },
+  {
+    "id": 95,
+    "name": "Count Characters in String",
+    "category": "String",
+    "level": "Easy",
+    "description": "Given a string S, count the total number of characters including spaces.\nExample:\nInput: hello world\nOutput: 11\nExplanation: Includes space between words.",
+    "test_cases": [
+      {
+        "input": "hello world",
+        "output": "11"
+      },
+      {
+        "input": "OpenAI",
+        "output": "6"
+      },
+      {
+        "input": "",
+        "output": "0"
+      },
+      {
+        "input": " ",
+        "output": "1"
+      },
+      {
+        "input": "a b c",
+        "output": "5"
+      }
+    ]
+  },
+  {
+    "id": 96,
+    "name": "Print 1 to N using Recursion",
+    "category": "Recursion (Basic)",
+    "level": "Easy",
+    "description": "You are given a number N. Your task is to use recursion to print numbers from N down to 1 in descending order.\nExample:\nIf N = 4, the output will be 4 3 2 1.",
+    "test_cases": [
+      {
+        "input": "5",
+        "output": "1 2 3 4 5"
+      },
+      {
+        "input": "3",
+        "output": "1 2 3"
+      },
+      {
+        "input": "1",
+        "output": "1"
+      },
+      {
+        "input": "0",
+        "output": ""
+      },
+      {
+        "input": "7",
+        "output": "1 2 3 4 5 6 7"
+      }
+    ]
+  },
+  {
+    "id": 97,
+    "name": "Print N to 1 using Recursion",
+    "category": "Recursion (Basic)",
+    "level": "Easy",
+    "description": "You are given a number N. Your task is to use recursion to print numbers from N down to 1 in descending order.\nExample:\nIf N = 4, the output will be 4 3 2 1.",
+    "test_cases": [
+      {
+        "input": "5",
+        "output": "5 4 3 2 1"
+      },
+      {
+        "input": "3",
+        "output": "3 2 1"
+      },
+      {
+        "input": "1",
+        "output": "1"
+      },
+      {
+        "input": "0",
+        "output": ""
+      },
+      {
+        "input": "7",
+        "output": "7 6 5 4 3 2 1"
+      }
+    ]
+  },
+  {
+    "id": 98,
+    "name": "Sum of first N natural numbers using recursion",
+    "category": "Recursion (Basic)",
+    "level": "Easy",
+    "description": "You are given a number N. Use a recursive function to calculate the sum of the first N natural numbers.\nExample:\nIf N = 5, the result is 1 + 2 + 3 + 4 + 5 = 15.",
+    "test_cases": [
+      {
+        "input": "5",
+        "output": "15"
+      },
+      {
+        "input": "3",
+        "output": "6"
+      },
+      {
+        "input": "1",
+        "output": "1"
+      },
+      {
+        "input": "0",
+        "output": "0"
+      },
+      {
+        "input": "7",
+        "output": "28"
+      }
+    ]
+  },
+  {
+    "id": 99,
+    "name": "Factorial of a number using recursion",
+    "category": "Recursion (Basic)",
+    "level": "Easy",
+    "description": "You are given a non-negative integer N. Your task is to use recursion to calculate the factorial of N, which is the product of all positive integers from 1 to N.\nExample:\nIf N = 4, the result is 4 * 3 * 2 * 1 = 24.",
+    "test_cases": [
+      {
+        "input": "5",
+        "output": "120"
+      },
+      {
+        "input": "3",
+        "output": "6"
+      },
+      {
+        "input": "1",
+        "output": "1"
+      },
+      {
+        "input": "0",
+        "output": "1"
+      },
+      {
+        "input": "7",
+        "output": "5040"
+      }
+    ]
+  },
+  {
+    "id": 100,
+    "name": "Check if a string is palindrome using recursion",
+    "category": "Recursion (Basic)",
+    "level": "Easy",
+    "description": "You are given a string. Use a recursive function to check whether the string is a palindrome (reads the same forwards and backwards).\nExample:\nFor the string 'madam', the result is Yes because it is a palindrome.",
+    "test_cases": [
+      {
+        "input": "madam",
+        "output": "Yes"
+      },
+      {
+        "input": "racecar",
+        "output": "Yes"
+      },
+      {
+        "input": "hello",
+        "output": "No"
+      },
+      {
+        "input": "level",
+        "output": "Yes"
+      },
+      {
+        "input": "world",
+        "output": "No"
+      }
+    ]
+  }
+]

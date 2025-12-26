@@ -1,0 +1,582 @@
+[
+  {
+    "id": 1,
+    "name": "Sum of Two Numbers",
+    "category": "Operators (Beginner)",
+    "level": "Easy",
+    "description": "Given two integers A and B, your task is to print their sum.\nExample:\nInput: 5 3\nOutput: 8\nExplanation: The sum of 5 and 3 is 8.",
+    "test_cases": [
+      {
+        "input": "5 3",
+        "output": "8"
+      },
+      {
+        "input": "-2 7",
+        "output": "5"
+      },
+      {
+        "input": "0 0",
+        "output": "0"
+      },
+      {
+        "input": "100 -50",
+        "output": "50"
+      },
+      {
+        "input": "999 1",
+        "output": "1000"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Difference of Two Numbers",
+    "category": "Operators (Beginner)",
+    "level": "Easy",
+    "description": "Given two integers A and B, print the result of A - B.\nExample:\nInput: 9 4\nOutput: 5\nExplanation: 9 minus 4 equals 5.",
+    "test_cases": [
+      {
+        "input": "9 4",
+        "output": "5"
+      },
+      {
+        "input": "3 7",
+        "output": "-4"
+      },
+      {
+        "input": "0 0",
+        "output": "0"
+      },
+      {
+        "input": "-5 -2",
+        "output": "-3"
+      },
+      {
+        "input": "100 100",
+        "output": "0"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Product of Two Numbers",
+    "category": "Operators (Beginner)",
+    "level": "Easy",
+    "description": "Given two integers A and B, print their product.\nExample:\nInput: 4 5\nOutput: 20\nExplanation: The product of 4 and 5 is 20.",
+    "test_cases": [
+      {
+        "input": "4 5",
+        "output": "20"
+      },
+      {
+        "input": "-3 6",
+        "output": "-18"
+      },
+      {
+        "input": "0 99",
+        "output": "0"
+      },
+      {
+        "input": "-7 -8",
+        "output": "56"
+      },
+      {
+        "input": "1 1000",
+        "output": "1000"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Integer Division",
+    "category": "Operators (Beginner)",
+    "level": "Easy",
+    "description": "Given two integers A and B, print the result of A divided by B using integer division.\nExample:\nInput: 10 3\nOutput: 3\nExplanation: 10 divided by 3 is 3.33, but integer division gives 3.",
+    "test_cases": [
+      {
+        "input": "10 3",
+        "output": "3"
+      },
+      {
+        "input": "20 5",
+        "output": "4"
+      },
+      {
+        "input": "9 2",
+        "output": "4"
+      },
+      {
+        "input": "-7 2",
+        "output": "-3"
+      },
+      {
+        "input": "0 5",
+        "output": "0"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Modulus of Two Numbers",
+    "category": "Operators (Beginner)",
+    "level": "Easy",
+    "description": "Given two integers A and B, print the remainder when A is divided by B.\nExample:\nInput: 10 4\nOutput: 2\nExplanation: 10 divided by 4 leaves remainder 2.",
+    "test_cases": [
+      {
+        "input": "10 4",
+        "output": "2"
+      },
+      {
+        "input": "15 6",
+        "output": "3"
+      },
+      {
+        "input": "7 7",
+        "output": "0"
+      },
+      {
+        "input": "5 2",
+        "output": "1"
+      },
+      {
+        "input": "100 10",
+        "output": "0"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Check Even or Odd",
+    "category": "Operators (Beginner)",
+    "level": "Easy",
+    "description": "Given an integer N, print 'Even' if it is even, otherwise print 'Odd'.\nExample:\nInput: 4\nOutput: Even\nExplanation: 4 is divisible by 2, so it is even.",
+    "test_cases": [
+      {
+        "input": "7",
+        "output": "Odd"
+      },
+      {
+        "input": "12",
+        "output": "Even"
+      },
+      {
+        "input": "0",
+        "output": "Even"
+      },
+      {
+        "input": "-5",
+        "output": "Odd"
+      },
+      {
+        "input": "100",
+        "output": "Even"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Is Divisible by 5",
+    "category": "Operators (Beginner)",
+    "level": "Easy",
+    "description": "Given an integer N, print 'Yes' if it is divisible by 5, otherwise print 'No'.\nExample:\nInput: 25\nOutput: Yes\nExplanation: 25 is divisible by 5.",
+    "test_cases": [
+      {
+        "input": "25",
+        "output": "Yes"
+      },
+      {
+        "input": "14",
+        "output": "No"
+      },
+      {
+        "input": "0",
+        "output": "Yes"
+      },
+      {
+        "input": "100",
+        "output": "Yes"
+      },
+      {
+        "input": "41",
+        "output": "No"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Square of a Number",
+    "category": "Operators (Beginner)",
+    "level": "Easy",
+    "description": "Given an integer N, print its square.\nExample:\nInput: 6\nOutput: 36\nExplanation: 6 squared is 36.",
+    "test_cases": [
+      {
+        "input": "6",
+        "output": "36"
+      },
+      {
+        "input": "-4",
+        "output": "16"
+      },
+      {
+        "input": "0",
+        "output": "0"
+      },
+      {
+        "input": "10",
+        "output": "100"
+      },
+      {
+        "input": "1",
+        "output": "1"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Cube of a Number",
+    "category": "Operators (Beginner)",
+    "level": "Easy",
+    "description": "Given an integer N, print its cube.\nExample:\nInput: 3\nOutput: 27\nExplanation: 3 cubed is 27.",
+    "test_cases": [
+      {
+        "input": "3",
+        "output": "27"
+      },
+      {
+        "input": "-2",
+        "output": "-8"
+      },
+      {
+        "input": "0",
+        "output": "0"
+      },
+      {
+        "input": "5",
+        "output": "125"
+      },
+      {
+        "input": "1",
+        "output": "1"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Sum of Three Numbers",
+    "category": "Operators (Beginner)",
+    "level": "Easy",
+    "description": "Given three integers, print their sum.\nExample:\nInput: 1 2 3\nOutput: 6\nExplanation: 1 + 2 + 3 = 6.",
+    "test_cases": [
+      {
+        "input": "1 2 3",
+        "output": "6"
+      },
+      {
+        "input": "10 20 30",
+        "output": "60"
+      },
+      {
+        "input": "-5 -10 15",
+        "output": "0"
+      },
+      {
+        "input": "0 0 0",
+        "output": "0"
+      },
+      {
+        "input": "100 200 300",
+        "output": "600"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Average of Two Numbers",
+    "category": "Operators (Beginner)",
+    "level": "Easy",
+    "description": "Given two integers A and B, print their average as a float with 1 decimal place.\nExample:\nInput: 10 20\nOutput: 15.0\nExplanation: (10 + 20)/2 = 15.0",
+    "test_cases": [
+      {
+        "input": "10 20",
+        "output": "15.0"
+      },
+      {
+        "input": "7 8",
+        "output": "7.5"
+      },
+      {
+        "input": "0 0",
+        "output": "0.0"
+      },
+      {
+        "input": "5 4",
+        "output": "4.5"
+      },
+      {
+        "input": "-6 6",
+        "output": "0.0"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Swap Two Numbers",
+    "category": "Operators (Beginner)",
+    "level": "Easy",
+    "description": "Given two integers A and B, print them in swapped order.\nExample:\nInput: 5 9\nOutput: 9 5\nExplanation: First becomes second, second becomes first.",
+    "test_cases": [
+      {
+        "input": "5 9",
+        "output": "9 5"
+      },
+      {
+        "input": "3 3",
+        "output": "3 3"
+      },
+      {
+        "input": "0 1",
+        "output": "1 0"
+      },
+      {
+        "input": "-4 7",
+        "output": "7 -4"
+      },
+      {
+        "input": "99 100",
+        "output": "100 99"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Convert Minutes to Seconds",
+    "category": "Operators (Beginner)",
+    "level": "Easy",
+    "description": "Given an integer M representing minutes, convert it to seconds.\nExample:\nInput: 5\nOutput: 300\nExplanation: 5 minutes = 5 \u00c3\u2014 60 = 300 seconds.",
+    "test_cases": [
+      {
+        "input": "5",
+        "output": "300"
+      },
+      {
+        "input": "12",
+        "output": "720"
+      },
+      {
+        "input": "0",
+        "output": "0"
+      },
+      {
+        "input": "1",
+        "output": "60"
+      },
+      {
+        "input": "100",
+        "output": "6000"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Convert Hours to Minutes",
+    "category": "Operators (Beginner)",
+    "level": "Easy",
+    "description": "Given an integer H representing hours, convert it to minutes.\nExample:\nInput: 2\nOutput: 120\nExplanation: 2 hours = 2 \u00c3\u2014 60 = 120 minutes.",
+    "test_cases": [
+      {
+        "input": "2",
+        "output": "120"
+      },
+      {
+        "input": "7",
+        "output": "420"
+      },
+      {
+        "input": "0",
+        "output": "0"
+      },
+      {
+        "input": "1",
+        "output": "60"
+      },
+      {
+        "input": "24",
+        "output": "1440"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Check if Two Numbers are Equal",
+    "category": "Operators (Beginner)",
+    "level": "Easy",
+    "description": "Given two integers A and B, print 'Equal' if they are same, otherwise print 'Not Equal'.\nExample:\nInput: 10 10\nOutput: Equal\nExplanation: Both numbers are same.",
+    "test_cases": [
+      {
+        "input": "10 10",
+        "output": "Equal"
+      },
+      {
+        "input": "4 5",
+        "output": "Not Equal"
+      },
+      {
+        "input": "-2 -2",
+        "output": "Equal"
+      },
+      {
+        "input": "0 1",
+        "output": "Not Equal"
+      },
+      {
+        "input": "7 7",
+        "output": "Equal"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Maximum of Two Numbers",
+    "category": "Operators (Beginner)",
+    "level": "Easy",
+    "description": "Given two integers A and B, print the greater one.\nExample:\nInput: 7 3\nOutput: 7\nExplanation: 7 is greater than 3.",
+    "test_cases": [
+      {
+        "input": "7 3",
+        "output": "7"
+      },
+      {
+        "input": "10 20",
+        "output": "20"
+      },
+      {
+        "input": "-5 -2",
+        "output": "-2"
+      },
+      {
+        "input": "100 100",
+        "output": "100"
+      },
+      {
+        "input": "0 -1",
+        "output": "0"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Minimum of Two Numbers",
+    "category": "Operators (Beginner)",
+    "level": "Easy",
+    "description": "Given two integers A and B, print the smaller one.\nExample:\nInput: 7 3\nOutput: 3\nExplanation: 3 is smaller than 7.",
+    "test_cases": [
+      {
+        "input": "7 3",
+        "output": "3"
+      },
+      {
+        "input": "10 20",
+        "output": "10"
+      },
+      {
+        "input": "-5 -2",
+        "output": "-5"
+      },
+      {
+        "input": "100 100",
+        "output": "100"
+      },
+      {
+        "input": "0 -1",
+        "output": "-1"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "name": "Double the Number",
+    "category": "Operators (Beginner)",
+    "level": "Easy",
+    "description": "Given an integer N, print its double (2 * N).\nExample:\nInput: 6\nOutput: 12\nExplanation: 2 times 6 is 12.",
+    "test_cases": [
+      {
+        "input": "6",
+        "output": "12"
+      },
+      {
+        "input": "0",
+        "output": "0"
+      },
+      {
+        "input": "-3",
+        "output": "-6"
+      },
+      {
+        "input": "100",
+        "output": "200"
+      },
+      {
+        "input": "1",
+        "output": "2"
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Triple the Number",
+    "category": "Operators (Beginner)",
+    "level": "Easy",
+    "description": "Given an integer N, print its triple (3 * N).\nExample:\nInput: 4\nOutput: 12\nExplanation: 3 times 4 is 12.",
+    "test_cases": [
+      {
+        "input": "4",
+        "output": "12"
+      },
+      {
+        "input": "-2",
+        "output": "-6"
+      },
+      {
+        "input": "0",
+        "output": "0"
+      },
+      {
+        "input": "1",
+        "output": "3"
+      },
+      {
+        "input": "100",
+        "output": "300"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Is Number Positive",
+    "category": "Operators (Beginner)",
+    "level": "Easy",
+    "description": "Given an integer N, print 'Yes' if it's positive, otherwise print 'No'.\nExample:\nInput: 5\nOutput: Yes\nExplanation: 5 is a positive number.",
+    "test_cases": [
+      {
+        "input": "5",
+        "output": "Yes"
+      },
+      {
+        "input": "-3",
+        "output": "No"
+      },
+      {
+        "input": "0",
+        "output": "No"
+      },
+      {
+        "input": "100",
+        "output": "Yes"
+      },
+      {
+        "input": "-1",
+        "output": "No"
+      }
+    ]
+  }
+]

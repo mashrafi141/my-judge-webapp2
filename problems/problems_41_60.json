@@ -1,0 +1,582 @@
+[
+  {
+    "id": 41,
+    "name": "Check if Number is Even using Bitwise",
+    "category": "Bitwise (Easy to Medium)",
+    "level": "Easy",
+    "description": "Given an integer N, check whether it is even using bitwise operator.\nExample:\nInput: 4\nOutput: Yes\nExplanation: If (N & 1) == 0, then N is even.",
+    "test_cases": [
+      {
+        "input": "4",
+        "output": "Yes"
+      },
+      {
+        "input": "7",
+        "output": "No"
+      },
+      {
+        "input": "0",
+        "output": "Yes"
+      },
+      {
+        "input": "1",
+        "output": "No"
+      },
+      {
+        "input": "100",
+        "output": "Yes"
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "name": "Find Bitwise AND of Two Numbers",
+    "category": "Bitwise (Easy to Medium)",
+    "level": "Easy",
+    "description": "Given two integers A and B, print A & B.\nExample:\nInput: 5 3\nOutput: 1\nExplanation: 5 & 3 = 0101 & 0011 = 0001 = 1.",
+    "test_cases": [
+      {
+        "input": "5 3",
+        "output": "1"
+      },
+      {
+        "input": "4 2",
+        "output": "0"
+      },
+      {
+        "input": "7 7",
+        "output": "7"
+      },
+      {
+        "input": "15 8",
+        "output": "8"
+      },
+      {
+        "input": "0 5",
+        "output": "0"
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "name": "Find Bitwise OR of Two Numbers",
+    "category": "Bitwise (Easy to Medium)",
+    "level": "Easy",
+    "description": "Given two integers A and B, print A | B.\nExample:\nInput: 5 3\nOutput: 7\nExplanation: 0101 | 0011 = 0111 = 7.",
+    "test_cases": [
+      {
+        "input": "5 3",
+        "output": "7"
+      },
+      {
+        "input": "0 0",
+        "output": "0"
+      },
+      {
+        "input": "1 2",
+        "output": "3"
+      },
+      {
+        "input": "7 8",
+        "output": "15"
+      },
+      {
+        "input": "4 1",
+        "output": "5"
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "name": "Find Bitwise XOR of Two Numbers",
+    "category": "Bitwise (Easy to Medium)",
+    "level": "Easy",
+    "description": "Given two integers A and B, print A ^ B.\nExample:\nInput: 5 3\nOutput: 6\nExplanation: 0101 ^ 0011 = 0110 = 6.",
+    "test_cases": [
+      {
+        "input": "5 3",
+        "output": "6"
+      },
+      {
+        "input": "4 4",
+        "output": "0"
+      },
+      {
+        "input": "7 2",
+        "output": "5"
+      },
+      {
+        "input": "10 1",
+        "output": "11"
+      },
+      {
+        "input": "0 9",
+        "output": "9"
+      }
+    ]
+  },
+  {
+    "id": 45,
+    "name": "Left Shift a Number by 1",
+    "category": "Bitwise (Easy to Medium)",
+    "level": "Easy",
+    "description": "Given an integer N, print N shifted left by 1.\nExample:\nInput: 3\nOutput: 6\nExplanation: 3 << 1 = 6",
+    "test_cases": [
+      {
+        "input": "3",
+        "output": "6"
+      },
+      {
+        "input": "1",
+        "output": "2"
+      },
+      {
+        "input": "0",
+        "output": "0"
+      },
+      {
+        "input": "5",
+        "output": "10"
+      },
+      {
+        "input": "7",
+        "output": "14"
+      }
+    ]
+  },
+  {
+    "id": 46,
+    "name": "Right Shift a Number by 1",
+    "category": "Bitwise (Easy to Medium)",
+    "level": "Easy",
+    "description": "Given an integer N, print N shifted right by 1.\nExample:\nInput: 4\nOutput: 2\nExplanation: 4 >> 1 = 2",
+    "test_cases": [
+      {
+        "input": "4",
+        "output": "2"
+      },
+      {
+        "input": "1",
+        "output": "0"
+      },
+      {
+        "input": "5",
+        "output": "2"
+      },
+      {
+        "input": "10",
+        "output": "5"
+      },
+      {
+        "input": "0",
+        "output": "0"
+      }
+    ]
+  },
+  {
+    "id": 47,
+    "name": "Check if K-th Bit is Set",
+    "category": "Bitwise (Easy to Medium)",
+    "level": "Medium",
+    "description": "Given N and K, check if K-th bit (0-indexed from right) is set in N.\nExample:\nInput: 5 0\nOutput: Yes\nExplanation: Binary 101, bit 0 is set.",
+    "test_cases": [
+      {
+        "input": "5 0",
+        "output": "Yes"
+      },
+      {
+        "input": "5 1",
+        "output": "No"
+      },
+      {
+        "input": "5 2",
+        "output": "Yes"
+      },
+      {
+        "input": "8 3",
+        "output": "Yes"
+      },
+      {
+        "input": "8 0",
+        "output": "No"
+      }
+    ]
+  },
+  {
+    "id": 48,
+    "name": "Toggle All Bits of a Number",
+    "category": "Bitwise (Easy to Medium)",
+    "level": "Medium",
+    "description": "Given an integer N and total bits B, toggle all B bits of N and return result.\nExample:\nInput: 5 3\nOutput: 2\nExplanation: 5 = 101 \u00e2\u2020\u2019 toggled = 010 = 2.",
+    "test_cases": [
+      {
+        "input": "5 3",
+        "output": "2"
+      },
+      {
+        "input": "0 4",
+        "output": "15"
+      },
+      {
+        "input": "15 4",
+        "output": "0"
+      },
+      {
+        "input": "7 3",
+        "output": "0"
+      },
+      {
+        "input": "1 3",
+        "output": "6"
+      }
+    ]
+  },
+  {
+    "id": 49,
+    "name": "Count Set Bits in Integer",
+    "category": "Bitwise (Easy to Medium)",
+    "level": "Medium",
+    "description": "Given an integer N, count how many 1s are in its binary representation.\nExample:\nInput: 5\nOutput: 2\nExplanation: Binary of 5 is 101 with two 1s.",
+    "test_cases": [
+      {
+        "input": "5",
+        "output": "2"
+      },
+      {
+        "input": "0",
+        "output": "0"
+      },
+      {
+        "input": "7",
+        "output": "3"
+      },
+      {
+        "input": "9",
+        "output": "2"
+      },
+      {
+        "input": "15",
+        "output": "4"
+      }
+    ]
+  },
+  {
+    "id": 50,
+    "name": "Check if Power of Two",
+    "category": "Bitwise (Easy to Medium)",
+    "level": "Medium",
+    "description": "Given a number N, check if it is a power of two.\nExample:\nInput: 8\nOutput: Yes\nExplanation: 8 = 2^3, so it's a power of 2.",
+    "test_cases": [
+      {
+        "input": "8",
+        "output": "Yes"
+      },
+      {
+        "input": "16",
+        "output": "Yes"
+      },
+      {
+        "input": "10",
+        "output": "No"
+      },
+      {
+        "input": "1",
+        "output": "Yes"
+      },
+      {
+        "input": "0",
+        "output": "No"
+      }
+    ]
+  },
+  {
+    "id": 51,
+    "name": "Calculate Square Root",
+    "category": "Math Functions (Easy to Medium)",
+    "level": "Easy",
+    "description": "Given an integer N, print the square root (floor value).\nExample:\nInput: 10\nOutput: 3\nExplanation: sqrt(10) \u00e2\u2030\u02c6 3.16, floor is 3.",
+    "test_cases": [
+      {
+        "input": "10",
+        "output": "3"
+      },
+      {
+        "input": "25",
+        "output": "5"
+      },
+      {
+        "input": "1",
+        "output": "1"
+      },
+      {
+        "input": "0",
+        "output": "0"
+      },
+      {
+        "input": "99",
+        "output": "9"
+      }
+    ]
+  },
+  {
+    "id": 52,
+    "name": "Calculate Absolute Value",
+    "category": "Math Functions (Easy to Medium)",
+    "level": "Easy",
+    "description": "Given an integer N, print its absolute value.\nExample:\nInput: -5\nOutput: 5\nExplanation: abs(-5) = 5.",
+    "test_cases": [
+      {
+        "input": "-5",
+        "output": "5"
+      },
+      {
+        "input": "0",
+        "output": "0"
+      },
+      {
+        "input": "10",
+        "output": "10"
+      },
+      {
+        "input": "-123",
+        "output": "123"
+      },
+      {
+        "input": "999",
+        "output": "999"
+      }
+    ]
+  },
+  {
+    "id": 53,
+    "name": "Round a Floating Number",
+    "category": "Math Functions (Easy to Medium)",
+    "level": "Easy",
+    "description": "Given a floating-point number, round it to the nearest integer.\nExample:\nInput: 4.6\nOutput: 5\nExplanation: Rounded from 4.6 to 5.",
+    "test_cases": [
+      {
+        "input": "4.6",
+        "output": "5"
+      },
+      {
+        "input": "2.3",
+        "output": "2"
+      },
+      {
+        "input": "0.9",
+        "output": "1"
+      },
+      {
+        "input": "-1.2",
+        "output": "-1"
+      },
+      {
+        "input": "-2.8",
+        "output": "-3"
+      }
+    ]
+  },
+  {
+    "id": 54,
+    "name": "Find Minimum of Two Numbers",
+    "category": "Math Functions (Easy to Medium)",
+    "level": "Easy",
+    "description": "Given two integers A and B, print the minimum.\nExample:\nInput: 5 9\nOutput: 5\nExplanation: Minimum of 5 and 9 is 5.",
+    "test_cases": [
+      {
+        "input": "5 9",
+        "output": "5"
+      },
+      {
+        "input": "2 2",
+        "output": "2"
+      },
+      {
+        "input": "-3 4",
+        "output": "-3"
+      },
+      {
+        "input": "100 50",
+        "output": "50"
+      },
+      {
+        "input": "0 1",
+        "output": "0"
+      }
+    ]
+  },
+  {
+    "id": 55,
+    "name": "Find Maximum of Two Numbers",
+    "category": "Math Functions (Easy to Medium)",
+    "level": "Easy",
+    "description": "Given two integers A and B, print the maximum.\nExample:\nInput: 5 9\nOutput: 9\nExplanation: Maximum of 5 and 9 is 9.",
+    "test_cases": [
+      {
+        "input": "5 9",
+        "output": "9"
+      },
+      {
+        "input": "2 2",
+        "output": "2"
+      },
+      {
+        "input": "-3 4",
+        "output": "4"
+      },
+      {
+        "input": "100 50",
+        "output": "100"
+      },
+      {
+        "input": "0 1",
+        "output": "1"
+      }
+    ]
+  },
+  {
+    "id": 56,
+    "name": "Calculate Power Using Math",
+    "category": "Math Functions (Easy to Medium)",
+    "level": "Medium",
+    "description": "Given integers A and B, calculate A^B using math functions.\nExample:\nInput: 2 3\nOutput: 8\nExplanation: 2^3 = 8.",
+    "test_cases": [
+      {
+        "input": "2 3",
+        "output": "8"
+      },
+      {
+        "input": "5 0",
+        "output": "1"
+      },
+      {
+        "input": "10 2",
+        "output": "100"
+      },
+      {
+        "input": "3 4",
+        "output": "81"
+      },
+      {
+        "input": "1 100",
+        "output": "1"
+      }
+    ]
+  },
+  {
+    "id": 57,
+    "name": "Calculate Floor and Ceil",
+    "category": "Math Functions (Easy to Medium)",
+    "level": "Medium",
+    "description": "Given a floating number, print floor and ceil of it.\nExample:\nInput: 4.7\nOutput: 4 5\nExplanation: floor(4.7)=4, ceil=5",
+    "test_cases": [
+      {
+        "input": "4.7",
+        "output": "4 5"
+      },
+      {
+        "input": "2.3",
+        "output": "2 3"
+      },
+      {
+        "input": "-1.1",
+        "output": "-2 -1"
+      },
+      {
+        "input": "0.0",
+        "output": "0 0"
+      },
+      {
+        "input": "-2.9",
+        "output": "-3 -2"
+      }
+    ]
+  },
+  {
+    "id": 58,
+    "name": "Calculate Log Base 10",
+    "category": "Math Functions (Easy to Medium)",
+    "level": "Medium",
+    "description": "Given a positive number N, print log base 10 of it (floor).\nExample:\nInput: 100\nOutput: 2\nExplanation: log10(100)=2.",
+    "test_cases": [
+      {
+        "input": "100",
+        "output": "2"
+      },
+      {
+        "input": "10",
+        "output": "1"
+      },
+      {
+        "input": "1",
+        "output": "0"
+      },
+      {
+        "input": "1000",
+        "output": "3"
+      },
+      {
+        "input": "500",
+        "output": "2"
+      }
+    ]
+  },
+  {
+    "id": 59,
+    "name": "Calculate Natural Logarithm",
+    "category": "Math Functions (Easy to Medium)",
+    "level": "Medium",
+    "description": "Given a positive number N, print its natural log (floor of ln(N)).\nExample:\nInput: 20\nOutput: 2\nExplanation: ln(20) \u00e2\u2030\u02c6 2.99 \u00e2\u2020\u2019 floor = 2.",
+    "test_cases": [
+      {
+        "input": "20",
+        "output": "2"
+      },
+      {
+        "input": "1",
+        "output": "0"
+      },
+      {
+        "input": "100",
+        "output": "4"
+      },
+      {
+        "input": "7",
+        "output": "1"
+      },
+      {
+        "input": "40",
+        "output": "3"
+      }
+    ]
+  },
+  {
+    "id": 60,
+    "name": "Find Cube Root (Floor)",
+    "category": "Math Functions (Easy to Medium)",
+    "level": "Medium",
+    "description": "Given a number N, find its cube root (floor value).\nExample:\nInput: 27\nOutput: 3\nExplanation: Cube root of 27 is 3.",
+    "test_cases": [
+      {
+        "input": "27",
+        "output": "3"
+      },
+      {
+        "input": "64",
+        "output": "4"
+      },
+      {
+        "input": "100",
+        "output": "4"
+      },
+      {
+        "input": "1",
+        "output": "1"
+      },
+      {
+        "input": "0",
+        "output": "0"
+      }
+    ]
+  }
+]

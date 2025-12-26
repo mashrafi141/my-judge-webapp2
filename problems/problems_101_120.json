@@ -1,0 +1,582 @@
+[
+  {
+    "id": 101,
+    "name": "Calculate nth Fibonacci number using recursion",
+    "category": "Recursion (Basic)",
+    "level": "Easy",
+    "description": "You are given a number N. Your task is to use recursion to calculate the N-th Fibonacci number, where F(0) = 0, F(1) = 1, and F(n) = F(n-1) + F(n-2) for n >= 2.\nExample:\nIf N = 6, the 6th Fibonacci number is 8.",
+    "test_cases": [
+      {
+        "input": "6",
+        "output": "8"
+      },
+      {
+        "input": "0",
+        "output": "0"
+      },
+      {
+        "input": "1",
+        "output": "1"
+      },
+      {
+        "input": "5",
+        "output": "5"
+      },
+      {
+        "input": "7",
+        "output": "13"
+      }
+    ]
+  },
+  {
+    "id": 102,
+    "name": "Count digits of a number using recursion",
+    "category": "Recursion (Basic)",
+    "level": "Easy",
+    "description": "You are given a non-negative integer. Use a recursive function to count how many digits are present in the number.\nExample:\nThe number 12345 has 5 digits.",
+    "test_cases": [
+      {
+        "input": "12345",
+        "output": "5"
+      },
+      {
+        "input": "7",
+        "output": "1"
+      },
+      {
+        "input": "100",
+        "output": "3"
+      },
+      {
+        "input": "0",
+        "output": "1"
+      },
+      {
+        "input": "9999",
+        "output": "4"
+      }
+    ]
+  },
+  {
+    "id": 103,
+    "name": "Print sum of digits of a number using recursion",
+    "category": "Recursion (Basic)",
+    "level": "Easy",
+    "description": "You are given a non-negative integer. Use recursion to calculate the sum of its digits.\nExample:\nFor input 456, the digit sum is 4 + 5 + 6 = 15.",
+    "test_cases": [
+      {
+        "input": "123",
+        "output": "6"
+      },
+      {
+        "input": "0",
+        "output": "0"
+      },
+      {
+        "input": "999",
+        "output": "27"
+      },
+      {
+        "input": "1001",
+        "output": "2"
+      },
+      {
+        "input": "4567",
+        "output": "22"
+      }
+    ]
+  },
+  {
+    "id": 104,
+    "name": "Linear Search in Array",
+    "category": "Brute Force (Linear Search + Sorting Mix)",
+    "level": "Easy",
+    "description": "You are given an array and a target value. Your task is to use linear search to find the index (1-based) of the first occurrence of the target element. If not found, print Not Found.\nExample:\nFor array [2, 7, 1, 9, 7] and target 7, output is Found at index 2.",
+    "test_cases": [
+      {
+        "input": "5\n2 7 1 9 7\n7\n",
+        "output": "Found at index 2"
+      },
+      {
+        "input": "5\n10 20 5 3 15\n3\n",
+        "output": "Found at index 4"
+      },
+      {
+        "input": "5\n1 2 3 4 5\n6\n",
+        "output": "Not Found"
+      },
+      {
+        "input": "4\n7 8 9 10\n8\n",
+        "output": "Found at index 2"
+      },
+      {
+        "input": "5\n5 6 7 8 9\n10\n",
+        "output": "Not Found"
+      }
+    ]
+  },
+  {
+    "id": 105,
+    "name": "Find Minimum and Maximum Element",
+    "category": "Brute Force (Linear Search + Sorting Mix)",
+    "level": "Easy",
+    "description": "You are given an array of integers. Find the smallest and largest elements in the array using brute-force traversal.\nExample:\nFor array [10, 20, 5, 3, 15], the output is Min = 3, Max = 20.",
+    "test_cases": [
+      {
+        "input": "5\n10 20 5 3 15",
+        "output": "Min = 3, Max = 20"
+      },
+      {
+        "input": "5\n1 2 3 4 5",
+        "output": "Min = 1, Max = 5"
+      },
+      {
+        "input": "5\n100 200 50 75 25",
+        "output": "Min = 25, Max = 200"
+      },
+      {
+        "input": "5\n7 8 9 10 11",
+        "output": "Min = 7, Max = 11"
+      },
+      {
+        "input": "5\n5 5 5 5 5",
+        "output": "Min = 5, Max = 5"
+      }
+    ]
+  },
+  {
+    "id": 106,
+    "name": "Count frequency of a given element",
+    "category": "Brute Force (Linear Search + Sorting Mix)",
+    "level": "Easy",
+    "description": "You are given an array of integers and a number x. Your task is to count how many times the number x appears in the array and print its frequency.\nExample:\nFor array [1, 2, 2, 3, 2, 4] and x = 2, the frequency is 3.",
+    "test_cases": [
+      {
+        "input": "6\n1 2 2 3 2 4\n2",
+        "output": "Frequency = 3"
+      },
+      {
+        "input": "5\n5 5 5 5 5\n5",
+        "output": "Frequency = 5"
+      },
+      {
+        "input": "5\n1 2 3 4 5\n6",
+        "output": "Frequency = 0"
+      },
+      {
+        "input": "5\n7 8 7 8 7\n7",
+        "output": "Frequency = 3"
+      },
+      {
+        "input": "4\n10 20 30 40\n25",
+        "output": "Frequency = 0"
+      }
+    ]
+  },
+  {
+    "id": 107,
+    "name": "Find Second Largest Element (using brute-force)",
+    "category": "Brute Force (Linear Search + Sorting Mix)",
+    "level": "Easy",
+    "description": "You are given an array of integers. Your task is to find the second largest element in the array. If all elements are the same, the second largest is the same as the largest.\nExample:\nFor [5, 10, 20, 8, 7], the second largest element is 10.",
+    "test_cases": [
+      {
+        "input": "5\n5 10 20 8 7",
+        "output": "Second Largest = 10"
+      },
+      {
+        "input": "5\n1 2 3 4 5",
+        "output": "Second Largest = 4"
+      },
+      {
+        "input": "5\n100 90 80 70 60",
+        "output": "Second Largest = 90"
+      },
+      {
+        "input": "5\n5 5 5 5 5",
+        "output": "Second Largest = 5"
+      },
+      {
+        "input": "5\n10 10 9 8 7",
+        "output": "Second Largest = 9"
+      }
+    ]
+  },
+  {
+    "id": 108,
+    "name": "Count Even and Odd Numbers",
+    "category": "Brute Force (Linear Search + Sorting Mix)",
+    "level": "Easy",
+    "description": "You are given an array of integers. Count how many even numbers and how many odd numbers are present in the array and print the results.\nExample:\nFor [1, 2, 3, 4, 5], there are 2 even and 3 odd numbers.",
+    "test_cases": [
+      {
+        "input": "5\n1 2 3 4 5",
+        "output": "Even = 2\nOdd = 3"
+      },
+      {
+        "input": "4\n2 4 6 8",
+        "output": "Even = 4\nOdd = 0"
+      },
+      {
+        "input": "3\n1 3 5",
+        "output": "Even = 0\nOdd = 3"
+      },
+      {
+        "input": "6\n10 15 20 25 30 35",
+        "output": "Even = 3\nOdd = 3"
+      },
+      {
+        "input": "5\n0 1 2 3 4",
+        "output": "Even = 3\nOdd = 2"
+      }
+    ]
+  },
+  {
+    "id": 109,
+    "name": "Find First and Last Occurrence of an Element",
+    "category": "Brute Force (Linear Search + Sorting Mix)",
+    "level": "Easy",
+    "description": "You are given an array of integers and a target value. Find and print the first and last positions (1-based index) of that element in the array. If the element does not exist, print 'Not Found'.\nExample:\nFor [1, 2, 3, 2, 4, 2] and 2, the first occurrence is at 2, and the last is at 6.",
+    "test_cases": [
+      {
+        "input": "6\n1 2 3 2 4 2\n2",
+        "output": "First = 2\nLast = 6"
+      },
+      {
+        "input": "5\n5 5 5 5 5\n5",
+        "output": "First = 1\nLast = 5"
+      },
+      {
+        "input": "5\n1 2 3 4 5\n6",
+        "output": "Not Found"
+      },
+      {
+        "input": "4\n7 8 9 7\n7",
+        "output": "First = 1\nLast = 4"
+      },
+      {
+        "input": "3\n10 20 30\n30",
+        "output": "First = 3\nLast = 3"
+      }
+    ]
+  },
+  {
+    "id": 110,
+    "name": "Count Positive, Negative, and Zero Elements",
+    "category": "Brute Force (Linear Search + Sorting Mix)",
+    "level": "Easy",
+    "description": "You are given an array of integers. Count how many elements are positive, how many are negative, and how many are zero. Print all three counts.\nExample:\nFor [1, -2, 0, 3, -4], there are 2 positives, 2 negatives, and 1 zero.",
+    "test_cases": [
+      {
+        "input": "5\n1 -2 0 3 -4",
+        "output": "Positive = 2\nNegative = 2\nZero = 1"
+      },
+      {
+        "input": "3\n0 0 0",
+        "output": "Positive = 0\nNegative = 0\nZero = 3"
+      },
+      {
+        "input": "4\n-1 -2 -3 -4",
+        "output": "Positive = 0\nNegative = 4\nZero = 0"
+      },
+      {
+        "input": "5\n1 2 3 4 5",
+        "output": "Positive = 5\nNegative = 0\nZero = 0"
+      },
+      {
+        "input": "6\n-1 0 1 -2 2 0",
+        "output": "Positive = 2\nNegative = 2\nZero = 2"
+      }
+    ]
+  },
+  {
+    "id": 111,
+    "name": "Count Elements Greater Than a Given Number",
+    "category": "Brute Force (Linear Search + Sorting Mix)",
+    "level": "Easy",
+    "description": "You are given an array of integers and a number x. Count how many elements in the array are strictly greater than x and print the result.\nExample:\nFor [1, 2, 3, 4, 5] and x = 3, the count is 2.",
+    "test_cases": [
+      {
+        "input": "5\n1 2 3 4 5\n3",
+        "output": "Count = 2"
+      },
+      {
+        "input": "4\n10 20 30 40\n25",
+        "output": "Count = 2"
+      },
+      {
+        "input": "3\n5 5 5\n5",
+        "output": "Count = 0"
+      },
+      {
+        "input": "5\n0 1 2 3 4\n-1",
+        "output": "Count = 5"
+      },
+      {
+        "input": "6\n1 2 3 4 5 6\n6",
+        "output": "Count = 0"
+      }
+    ]
+  },
+  {
+    "id": 112,
+    "name": "Find Sum of Elements at Even Indices",
+    "category": "Brute Force (Linear Search + Sorting Mix)",
+    "level": "Easy",
+    "description": "You are given an array of integers. Calculate and print the sum of all elements that are located at even indices (i.e., 0, 2, 4, ... in 0-based indexing).\nExample:\nFor [1, 2, 3, 4, 5], the elements at even indices are 1, 3, and 5, so the sum is 9.",
+    "test_cases": [
+      {
+        "input": "5\n1 2 3 4 5",
+        "output": "Sum = 9"
+      },
+      {
+        "input": "4\n10 20 30 40",
+        "output": "Sum = 40"
+      },
+      {
+        "input": "3\n1 1 1",
+        "output": "Sum = 2"
+      },
+      {
+        "input": "6\n5 4 3 2 1 0",
+        "output": "Sum = 9"
+      },
+      {
+        "input": "5\n0 0 0 0 0",
+        "output": "Sum = 0"
+      }
+    ]
+  },
+  {
+    "id": 113,
+    "name": "Check if an Array is Sorted or Not",
+    "category": "Brute Force (Linear Search + Sorting Mix)",
+    "level": "Easy",
+    "description": "You are given an array of integers. Check whether the array is sorted in either increasing or decreasing order. If it is sorted in any direction, print 'Sorted'; otherwise, print 'Not Sorted'.\nExample:\nFor [1, 2, 3, 5, 4], the array is not sorted.",
+    "test_cases": [
+      {
+        "input": "5\n1 2 3 5 4",
+        "output": "Not Sorted"
+      },
+      {
+        "input": "5\n1 2 3 4 5",
+        "output": "Sorted"
+      },
+      {
+        "input": "5\n5 4 3 2 1",
+        "output": "Sorted"
+      },
+      {
+        "input": "5\n1 3 2 4 5",
+        "output": "Not Sorted"
+      },
+      {
+        "input": "5\n10 20 30 40 50",
+        "output": "Sorted"
+      }
+    ]
+  },
+  {
+    "id": 114,
+    "name": "Sort an array using Bubble Sort (Brute Force)",
+    "category": "Brute Force (Linear Search + Sorting Mix)",
+    "level": "Easy",
+    "description": "You are given an unsorted array of integers. Sort the array in non-decreasing order using the Bubble Sort algorithm and print the sorted array.\nExample:\nFor [5, 3, 8, 1], the sorted array is 1 3 5 8.",
+    "test_cases": [
+      {
+        "input": "4\n5 3 8 1",
+        "output": "1 3 5 8"
+      },
+      {
+        "input": "4\n10 9 8 7",
+        "output": "7 8 9 10"
+      },
+      {
+        "input": "5\n1 2 3 4 5",
+        "output": "1 2 3 4 5"
+      },
+      {
+        "input": "4\n3 3 3 3",
+        "output": "3 3 3 3"
+      },
+      {
+        "input": "5\n9 8 7 6 5",
+        "output": "5 6 7 8 9"
+      }
+    ]
+  },
+  {
+    "id": 115,
+    "name": "Find common elements in two arrays (Brute Force Compare)",
+    "category": "Brute Force (Linear Search + Sorting Mix)",
+    "level": "Easy",
+    "description": "You are given two arrays of integers. Find and print all the elements that are present in both arrays. Maintain the order of the first array and include repeated elements if present in both.\nExample:\nFor arrays [1, 2, 3, 4, 5] and [2, 4, 6, 8], the common elements are 2 4.",
+    "test_cases": [
+      {
+        "input": "5\n1 2 3 4 5\n4\n2 4 6 8",
+        "output": "2 4"
+      },
+      {
+        "input": "4\n5 6 7 8\n4\n1 2 3 4",
+        "output": "None"
+      },
+      {
+        "input": "3\n10 20 30\n3\n20 30 40",
+        "output": "20 30"
+      },
+      {
+        "input": "4\n1 1 2 2\n4\n2 2 3 3",
+        "output": "2 2"
+      },
+      {
+        "input": "3\n7 8 9\n3\n7 8 9",
+        "output": "7 8 9"
+      }
+    ]
+  },
+  {
+    "id": 116,
+    "name": "Rearrange Array in Alternating Positive and Negative",
+    "category": "Brute Force (Linear Search + Sorting Mix)",
+    "level": "Medium",
+    "description": "You are given an array containing positive and negative integers. Rearrange the array so that positive and negative numbers alternate. If one type runs out before the other, append the remaining numbers at the end without changing their relative order.\nExample:\nGiven [1, -2, 3, -4, 5, -6], a valid rearrangement is 1 -2 3 -4 5 -6.",
+    "test_cases": [
+      {
+        "input": "6\n1 -2 3 -4 5 -6",
+        "output": "1 -2 3 -4 5 -6"
+      },
+      {
+        "input": "4\n-1 -2 3 4",
+        "output": "3 -1 4 -2"
+      },
+      {
+        "input": "6\n1 2 3 -1 2 -3",
+        "output": "1 -1 2 -3 3 2"
+      },
+      {
+        "input": "5\n-5 -4 -3 1 2",
+        "output": "1 -5 2 -4 -3"
+      },
+      {
+        "input": "4\n1 -1 -2 -3",
+        "output": "1 -1 -2 -3"
+      }
+    ]
+  },
+  {
+    "id": 117,
+    "name": "Find All Pairs with Given Sum",
+    "category": "Brute Force (Linear Search + Sorting Mix)",
+    "level": "Medium",
+    "description": "You are given an array of integers and a target sum. Find all pairs of elements whose sum equals the target. Each pair should be printed in the order found, including duplicates if any.\nExample:\nFor array [1, 5, 7, -1, 5, 3] and sum 6, the pairs are (1,5) (1,5) (7,-1).",
+    "test_cases": [
+      {
+        "input": "6\n1 5 7 -1 5 3\n6",
+        "output": "(1,5) (1,5) (7,-1)"
+      },
+      {
+        "input": "5\n1 2 3 4 5\n9",
+        "output": "(4,5)"
+      },
+      {
+        "input": "4\n1 2 3 4\n8",
+        "output": "None"
+      },
+      {
+        "input": "3\n2 2 2\n4",
+        "output": "(2,2) (2,2) (2,2)"
+      },
+      {
+        "input": "5\n-1 -2 3 4 5\n2",
+        "output": "(-1,3) (-2,4)"
+      }
+    ]
+  },
+  {
+    "id": 118,
+    "name": "Move All Zeros to End (Maintain Order)",
+    "category": "Brute Force (Linear Search + Sorting Mix)",
+    "level": "Medium",
+    "description": "You are given an array of integers that may contain zeros. Rearrange the array such that all zeros are moved to the end while keeping the relative order of the non-zero elements unchanged.\nExample:\nFor [0, 1, 0, 3, 12], the rearranged array is 1 3 12 0 0.",
+    "test_cases": [
+      {
+        "input": "5\n0 1 0 3 12",
+        "output": "1 3 12 0 0"
+      },
+      {
+        "input": "4\n1 2 3 4",
+        "output": "1 2 3 4"
+      },
+      {
+        "input": "4\n0 0 0 1",
+        "output": "1 0 0 0"
+      },
+      {
+        "input": "5\n0 0 1 0 2",
+        "output": "1 2 0 0 0"
+      },
+      {
+        "input": "3\n0 0 0",
+        "output": "0 0 0"
+      }
+    ]
+  },
+  {
+    "id": 119,
+    "name": "Print distinct elements in ascending order and find their sum",
+    "category": "Brute Force (Linear Search + Sorting Mix)",
+    "level": "Medium",
+    "description": "You are given an array of integers. Extract all distinct elements, sort them in ascending order, print them, and then print the sum of these distinct elements on a new line.\nExample:\nFor [1, 2, 3, 2, 4, 5], distinct elements are 1 2 3 4 5 and their sum is 15.",
+    "test_cases": [
+      {
+        "input": "6\n1 2 3 2 4 5",
+        "output": "1 2 3 4 5\n15"
+      },
+      {
+        "input": "8\n1 2 3 2 3 4 5 4",
+        "output": "1 2 3 4 5\n15"
+      },
+      {
+        "input": "4\n5 5 5 5",
+        "output": "5\n5"
+      },
+      {
+        "input": "6\n3 1 2 3 4 2",
+        "output": "1 2 3 4\n10"
+      },
+      {
+        "input": "3\n9 8 9",
+        "output": "8 9\n17"
+      }
+    ]
+  },
+  {
+    "id": 120,
+    "name": "Find First Repeating Element",
+    "category": "Brute Force (Linear Search + Sorting Mix)",
+    "level": "Medium",
+    "description": "You are given an array of integers. Find the first element that repeats (appears more than once) when traversing from left to right. If there is no repeating element, print 'None'.\nExample:\nFor [1, 2, 3, 2, 4, 5], the first repeating element is 2.",
+    "test_cases": [
+      {
+        "input": "6\n1 2 3 2 4 5",
+        "output": "2"
+      },
+      {
+        "input": "5\n1 2 3 4 5",
+        "output": "None"
+      },
+      {
+        "input": "4\n5 5 5 5",
+        "output": "5"
+      },
+      {
+        "input": "6\n3 1 2 3 4 2",
+        "output": "3"
+      },
+      {
+        "input": "3\n9 8 9",
+        "output": "9"
+      }
+    ]
+  }
+]

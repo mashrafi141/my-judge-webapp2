@@ -1,0 +1,582 @@
+[
+  {
+    "id": 61,
+    "name": "Find Maximum Element in Array",
+    "category": "Array (Easy to Medium)",
+    "level": "Easy",
+    "description": "Given an array of N integers, find the maximum element.\nExample:\nInput: 5\n1 4 2 9 3\nOutput: 9",
+    "test_cases": [
+      {
+        "input": "5\n1 4 2 9 3",
+        "output": "9"
+      },
+      {
+        "input": "3\n-1 -2 -3",
+        "output": "-1"
+      },
+      {
+        "input": "1\n10",
+        "output": "10"
+      },
+      {
+        "input": "4\n7 7 7 7",
+        "output": "7"
+      },
+      {
+        "input": "6\n9 1 2 3 6 5",
+        "output": "9"
+      }
+    ]
+  },
+  {
+    "id": 62,
+    "name": "Find Minimum Element in Array",
+    "category": "Array (Easy to Medium)",
+    "level": "Easy",
+    "description": "Given an array of N integers, find the minimum element.\nExample:\nInput: 5\n1 4 2 9 3\nOutput: 1",
+    "test_cases": [
+      {
+        "input": "5\n1 4 2 9 3",
+        "output": "1"
+      },
+      {
+        "input": "3\n-1 -2 -3",
+        "output": "-3"
+      },
+      {
+        "input": "1\n10",
+        "output": "10"
+      },
+      {
+        "input": "4\n7 7 7 7",
+        "output": "7"
+      },
+      {
+        "input": "6\n9 1 2 3 6 5",
+        "output": "1"
+      }
+    ]
+  },
+  {
+    "id": 63,
+    "name": "Calculate Sum of Array Elements",
+    "category": "Array (Easy to Medium)",
+    "level": "Easy",
+    "description": "Given an array of N integers, calculate the sum of all elements.\nExample:\nInput: 4\n1 2 3 4\nOutput: 10",
+    "test_cases": [
+      {
+        "input": "4\n1 2 3 4",
+        "output": "10"
+      },
+      {
+        "input": "3\n5 5 5",
+        "output": "15"
+      },
+      {
+        "input": "1\n100",
+        "output": "100"
+      },
+      {
+        "input": "2\n-1 1",
+        "output": "0"
+      },
+      {
+        "input": "5\n0 0 0 0 0",
+        "output": "0"
+      }
+    ]
+  },
+  {
+    "id": 64,
+    "name": "Count Even Numbers in Array",
+    "category": "Array (Easy to Medium)",
+    "level": "Easy",
+    "description": "Given an array of N integers, count how many are even.\nExample:\nInput: 5\n1 2 3 4 5\nOutput: 2",
+    "test_cases": [
+      {
+        "input": "5\n1 2 3 4 5",
+        "output": "2"
+      },
+      {
+        "input": "3\n2 4 6",
+        "output": "3"
+      },
+      {
+        "input": "4\n1 3 5 7",
+        "output": "0"
+      },
+      {
+        "input": "1\n0",
+        "output": "1"
+      },
+      {
+        "input": "6\n10 11 12 13 14 15",
+        "output": "3"
+      }
+    ]
+  },
+  {
+    "id": 65,
+    "name": "Search Element in Array",
+    "category": "Array (Easy to Medium)",
+    "level": "Medium",
+    "description": "Given N elements and a number X, check if X is present in the array.\nExample:\nInput: 5\n1 2 3 4 5\n3\nOutput: Yes",
+    "test_cases": [
+      {
+        "input": "5\n1 2 3 4 5\n3",
+        "output": "Yes"
+      },
+      {
+        "input": "4\n10 20 30 40\n25",
+        "output": "No"
+      },
+      {
+        "input": "1\n5\n5",
+        "output": "Yes"
+      },
+      {
+        "input": "3\n0 0 0\n1",
+        "output": "No"
+      },
+      {
+        "input": "6\n1 2 3 4 5 6\n6",
+        "output": "Yes"
+      }
+    ]
+  },
+  {
+    "id": 66,
+    "name": "Count Positive Numbers in Array",
+    "category": "Array (Easy to Medium)",
+    "level": "Easy",
+    "description": "Given an array of N integers, count how many are positive.\nExample:\nInput: 5\n-1 2 -3 4 5\nOutput: 3",
+    "test_cases": [
+      {
+        "input": "5\n-1 2 -3 4 5",
+        "output": "3"
+      },
+      {
+        "input": "3\n-1 -2 -3",
+        "output": "0"
+      },
+      {
+        "input": "4\n1 1 1 1",
+        "output": "4"
+      },
+      {
+        "input": "1\n0",
+        "output": "0"
+      },
+      {
+        "input": "6\n0 -2 3 4 -1 1",
+        "output": "3"
+      }
+    ]
+  },
+  {
+    "id": 67,
+    "name": "Reverse an Array",
+    "category": "Array (Easy to Medium)",
+    "level": "Medium",
+    "description": "Given an array of N integers, print the array in reverse order.\nExample:\nInput: 3\n1 2 3\nOutput: 3 2 1",
+    "test_cases": [
+      {
+        "input": "3\n1 2 3",
+        "output": "3 2 1"
+      },
+      {
+        "input": "5\n10 20 30 40 50",
+        "output": "50 40 30 20 10"
+      },
+      {
+        "input": "1\n9",
+        "output": "9"
+      },
+      {
+        "input": "2\n0 -1",
+        "output": "-1 0"
+      },
+      {
+        "input": "4\n7 8 9 10",
+        "output": "10 9 8 7"
+      }
+    ]
+  },
+  {
+    "id": 68,
+    "name": "Find Frequency of Element in Array",
+    "category": "Array (Easy to Medium)",
+    "level": "Medium",
+    "description": "Given an array of N integers and a number X, count its occurrences.\nExample:\nInput: 5\n1 2 2 3 2\n2\nOutput: 3",
+    "test_cases": [
+      {
+        "input": "5\n1 2 2 3 2\n2",
+        "output": "3"
+      },
+      {
+        "input": "3\n4 5 6\n7",
+        "output": "0"
+      },
+      {
+        "input": "1\n1\n1",
+        "output": "1"
+      },
+      {
+        "input": "4\n9 9 9 9\n9",
+        "output": "4"
+      },
+      {
+        "input": "6\n0 1 0 2 0 3\n0",
+        "output": "3"
+      }
+    ]
+  },
+  {
+    "id": 69,
+    "name": "Print Elements at Even Indices",
+    "category": "Array (Easy to Medium)",
+    "level": "Easy",
+    "description": "Given an array of N integers, print elements at even indices.\nExample:\nInput: 5\n10 20 30 40 50\nOutput: 10 30 50",
+    "test_cases": [
+      {
+        "input": "5\n10 20 30 40 50",
+        "output": "10 30 50"
+      },
+      {
+        "input": "4\n1 2 3 4",
+        "output": "1 3"
+      },
+      {
+        "input": "1\n9",
+        "output": "9"
+      },
+      {
+        "input": "3\n5 6 7",
+        "output": "5 7"
+      },
+      {
+        "input": "2\n0 1",
+        "output": "0"
+      }
+    ]
+  },
+  {
+    "id": 70,
+    "name": "Find Second Largest in Array",
+    "category": "Array (Easy to Medium)",
+    "level": "Medium",
+    "description": "Given an array of N integers, find the second largest unique element.\nExample:\nInput: 5\n1 2 3 4 5\nOutput: 4",
+    "test_cases": [
+      {
+        "input": "5\n1 2 3 4 5",
+        "output": "4"
+      },
+      {
+        "input": "4\n5 5 5 5",
+        "output": "-1"
+      },
+      {
+        "input": "3\n10 20 10",
+        "output": "10"
+      },
+      {
+        "input": "2\n9 8",
+        "output": "8"
+      },
+      {
+        "input": "1\n7",
+        "output": "-1"
+      }
+    ]
+  },
+  {
+    "id": 71,
+    "name": "Print String Length",
+    "category": "String",
+    "level": "Easy",
+    "description": "Given a string S, print its length.\nExample:\nInput: hello\nOutput: 5\nExplanation: \"hello\" has 5 characters.",
+    "test_cases": [
+      {
+        "input": "hello",
+        "output": "5"
+      },
+      {
+        "input": "",
+        "output": "0"
+      },
+      {
+        "input": "a",
+        "output": "1"
+      },
+      {
+        "input": "OpenAI",
+        "output": "6"
+      },
+      {
+        "input": "12345",
+        "output": "5"
+      }
+    ]
+  },
+  {
+    "id": 72,
+    "name": "Concatenate Two Strings",
+    "category": "String",
+    "level": "Easy",
+    "description": "Given two strings A and B, print A concatenated with B.\nExample:\nInput:\nhello\nworld\nOutput: helloworld\nExplanation: Concatenate both strings.",
+    "test_cases": [
+      {
+        "input": "hello\nworld",
+        "output": "helloworld"
+      },
+      {
+        "input": "Open\nAI",
+        "output": "OpenAI"
+      },
+      {
+        "input": "\n",
+        "output": ""
+      },
+      {
+        "input": "abc\n123",
+        "output": "abc123"
+      },
+      {
+        "input": "foo\n",
+        "output": "foo"
+      }
+    ]
+  },
+  {
+    "id": 73,
+    "name": "Convert to Uppercase",
+    "category": "String",
+    "level": "Easy",
+    "description": "Given a lowercase string S, convert it to uppercase.\nExample:\nInput: hello\nOutput: HELLO\nExplanation: All letters become uppercase.",
+    "test_cases": [
+      {
+        "input": "hello",
+        "output": "HELLO"
+      },
+      {
+        "input": "openai",
+        "output": "OPENAI"
+      },
+      {
+        "input": "aBc",
+        "output": "ABC"
+      },
+      {
+        "input": "",
+        "output": ""
+      },
+      {
+        "input": "xyz123",
+        "output": "XYZ123"
+      }
+    ]
+  },
+  {
+    "id": 74,
+    "name": "Convert to Lowercase",
+    "category": "String",
+    "level": "Easy",
+    "description": "Given an uppercase string S, convert it to lowercase.\nExample:\nInput: HELLO\nOutput: hello\nExplanation: All letters become lowercase.",
+    "test_cases": [
+      {
+        "input": "HELLO",
+        "output": "hello"
+      },
+      {
+        "input": "OpenAI",
+        "output": "openai"
+      },
+      {
+        "input": "ABC123",
+        "output": "abc123"
+      },
+      {
+        "input": "",
+        "output": ""
+      },
+      {
+        "input": "XYZ",
+        "output": "xyz"
+      }
+    ]
+  },
+  {
+    "id": 75,
+    "name": "Check if Palindrome String",
+    "category": "String",
+    "level": "Easy",
+    "description": "Given a string S, check if it reads the same forwards and backwards.\nExample:\nInput: level\nOutput: Yes\nExplanation: \"level\" is palindrome.",
+    "test_cases": [
+      {
+        "input": "level",
+        "output": "Yes"
+      },
+      {
+        "input": "hello",
+        "output": "No"
+      },
+      {
+        "input": "a",
+        "output": "Yes"
+      },
+      {
+        "input": "",
+        "output": "Yes"
+      },
+      {
+        "input": "racecar",
+        "output": "Yes"
+      }
+    ]
+  },
+  {
+    "id": 76,
+    "name": "Count Vowels in String",
+    "category": "String",
+    "level": "Easy",
+    "description": "Given string S, count vowels (a,e,i,o,u, both cases).\nExample:\nInput: hello\nOutput: 2\nExplanation: 'e' and 'o' are vowels.",
+    "test_cases": [
+      {
+        "input": "hello",
+        "output": "2"
+      },
+      {
+        "input": "HELLO",
+        "output": "2"
+      },
+      {
+        "input": "xyz",
+        "output": "0"
+      },
+      {
+        "input": "OpenAI",
+        "output": "4"
+      },
+      {
+        "input": "",
+        "output": "0"
+      }
+    ]
+  },
+  {
+    "id": 77,
+    "name": "Count Consonants in String",
+    "category": "String",
+    "level": "Easy",
+    "description": "Given string S, count consonant letters (both cases).\nExample:\nInput: hello\nOutput: 3\nExplanation: 'h','l','l' are consonants.",
+    "test_cases": [
+      {
+        "input": "hello",
+        "output": "3"
+      },
+      {
+        "input": "HELLO",
+        "output": "3"
+      },
+      {
+        "input": "aeiou",
+        "output": "0"
+      },
+      {
+        "input": "OpenAI",
+        "output": "2"
+      },
+      {
+        "input": "",
+        "output": "0"
+      }
+    ]
+  },
+  {
+    "id": 78,
+    "name": "Count Words in a Sentence",
+    "category": "String",
+    "level": "Easy",
+    "description": "Given sentence S (words separated by spaces), count words.\nExample:\nInput: hello world\nOutput: 2\nExplanation: Two words present.",
+    "test_cases": [
+      {
+        "input": "hello world",
+        "output": "2"
+      },
+      {
+        "input": "OpenAI is great",
+        "output": "3"
+      },
+      {
+        "input": "",
+        "output": "0"
+      },
+      {
+        "input": "a b c",
+        "output": "3"
+      },
+      {
+        "input": "one",
+        "output": "1"
+      }
+    ]
+  },
+  {
+    "id": 79,
+    "name": "Reverse a String",
+    "category": "String",
+    "level": "Medium",
+    "description": "Given string S, print it reversed.\nExample:\nInput: hello\nOutput: olleh\nExplanation: String reversed.",
+    "test_cases": [
+      {
+        "input": "hello",
+        "output": "olleh"
+      },
+      {
+        "input": "",
+        "output": ""
+      },
+      {
+        "input": "a",
+        "output": "a"
+      },
+      {
+        "input": "OpenAI",
+        "output": "IAnepO"
+      },
+      {
+        "input": "racecar",
+        "output": "racecar"
+      }
+    ]
+  },
+  {
+    "id": 80,
+    "name": "Check Anagram",
+    "category": "String",
+    "level": "Medium",
+    "description": "Given two strings, check if they are anagrams.\nExample:\nInput:\nlisten\nsilent\nOutput: Yes\nExplanation: same letters rearranged.",
+    "test_cases": [
+      {
+        "input": "listen\nsilent",
+        "output": "Yes"
+      },
+      {
+        "input": "hello\nbello",
+        "output": "No"
+      },
+      {
+        "input": "anagram\nnagaram",
+        "output": "Yes"
+      },
+      {
+        "input": "a\nb",
+        "output": "No"
+      },
+      {
+        "input": "abc\bc",
+        "output": "No"
+      }
+    ]
+  }
+]

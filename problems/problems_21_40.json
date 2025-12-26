@@ -1,0 +1,582 @@
+[
+  {
+    "id": 21,
+    "name": "Check Positive, Negative or Zero",
+    "category": "If-Else + Loop (Easy to Medium)",
+    "level": "Easy",
+    "description": "Given an integer N, determine whether it is positive, negative, or zero.\nExample:\nInput: -3\nOutput: Negative\nExplanation: -3 is less than 0, so it is Negative.",
+    "test_cases": [
+      {
+        "input": "-3",
+        "output": "Negative"
+      },
+      {
+        "input": "0",
+        "output": "Zero"
+      },
+      {
+        "input": "12",
+        "output": "Positive"
+      },
+      {
+        "input": "-100",
+        "output": "Negative"
+      },
+      {
+        "input": "7",
+        "output": "Positive"
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "name": "Print First N Natural Numbers",
+    "category": "If-Else + Loop (Easy to Medium)",
+    "level": "Easy",
+    "description": "Given a number N, print the first N natural numbers starting from 1.\nExample:\nInput: 5\nOutput: 1 2 3 4 5\nExplanation: The first 5 natural numbers are printed in order.",
+    "test_cases": [
+      {
+        "input": "5",
+        "output": "1 2 3 4 5"
+      },
+      {
+        "input": "3",
+        "output": "1 2 3"
+      },
+      {
+        "input": "1",
+        "output": "1"
+      },
+      {
+        "input": "0",
+        "output": ""
+      },
+      {
+        "input": "7",
+        "output": "1 2 3 4 5 6 7"
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "name": "Print Even Numbers Upto N",
+    "category": "If-Else + Loop (Easy to Medium)",
+    "level": "Easy",
+    "description": "Given an integer N, print all even numbers from 1 to N.\nExample:\nInput: 6\nOutput: 2 4 6\nExplanation: These are the even numbers between 1 and 6.",
+    "test_cases": [
+      {
+        "input": "6",
+        "output": "2 4 6"
+      },
+      {
+        "input": "1",
+        "output": ""
+      },
+      {
+        "input": "10",
+        "output": "2 4 6 8 10"
+      },
+      {
+        "input": "5",
+        "output": "2 4"
+      },
+      {
+        "input": "2",
+        "output": "2"
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "name": "Sum of Digits of a Number",
+    "category": "If-Else + Loop (Easy to Medium)",
+    "level": "Easy",
+    "description": "Given an integer N, calculate the sum of its digits.\nExample:\nInput: 123\nOutput: 6\nExplanation: 1+2+3 = 6",
+    "test_cases": [
+      {
+        "input": "123",
+        "output": "6"
+      },
+      {
+        "input": "0",
+        "output": "0"
+      },
+      {
+        "input": "999",
+        "output": "27"
+      },
+      {
+        "input": "5",
+        "output": "5"
+      },
+      {
+        "input": "1001",
+        "output": "2"
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "name": "Check Leap Year",
+    "category": "If-Else + Loop (Easy to Medium)",
+    "level": "Easy",
+    "description": "Given a year Y, determine if it's a leap year.\nExample:\nInput: 2020\nOutput: Yes\nExplanation: 2020 is divisible by 4 and not 100, so it's a leap year.",
+    "test_cases": [
+      {
+        "input": "2020",
+        "output": "Yes"
+      },
+      {
+        "input": "1900",
+        "output": "No"
+      },
+      {
+        "input": "2000",
+        "output": "Yes"
+      },
+      {
+        "input": "2021",
+        "output": "No"
+      },
+      {
+        "input": "2400",
+        "output": "Yes"
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "name": "Factorial of a Number",
+    "category": "If-Else + Loop (Easy to Medium)",
+    "level": "Medium",
+    "description": "Given a non-negative integer N, compute its factorial.\nExample:\nInput: 4\nOutput: 24\nExplanation: 4! = 4\u00c3\u20143\u00c3\u20142\u00c3\u20141 = 24",
+    "test_cases": [
+      {
+        "input": "4",
+        "output": "24"
+      },
+      {
+        "input": "0",
+        "output": "1"
+      },
+      {
+        "input": "1",
+        "output": "1"
+      },
+      {
+        "input": "5",
+        "output": "120"
+      },
+      {
+        "input": "6",
+        "output": "720"
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "name": "Count Number of Digits",
+    "category": "If-Else + Loop (Easy to Medium)",
+    "level": "Easy",
+    "description": "Given an integer N, print the number of digits it contains.\nExample:\nInput: 1234\nOutput: 4\nExplanation: It has 4 digits.",
+    "test_cases": [
+      {
+        "input": "1234",
+        "output": "4"
+      },
+      {
+        "input": "0",
+        "output": "1"
+      },
+      {
+        "input": "9",
+        "output": "1"
+      },
+      {
+        "input": "10001",
+        "output": "5"
+      },
+      {
+        "input": "99999",
+        "output": "5"
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "name": "Print Multiplication Table",
+    "category": "If-Else + Loop (Easy to Medium)",
+    "level": "Easy",
+    "description": "Given a number N, print its multiplication table up to 10.\nExample:\nInput: 2\nOutput: 2 4 6 8 10 12 14 16 18 20\nExplanation: Multiples of 2 up to 10.",
+    "test_cases": [
+      {
+        "input": "2",
+        "output": "2 4 6 8 10 12 14 16 18 20"
+      },
+      {
+        "input": "5",
+        "output": "5 10 15 20 25 30 35 40 45 50"
+      },
+      {
+        "input": "1",
+        "output": "1 2 3 4 5 6 7 8 9 10"
+      },
+      {
+        "input": "0",
+        "output": "0 0 0 0 0 0 0 0 0 0"
+      },
+      {
+        "input": "10",
+        "output": "10 20 30 40 50 60 70 80 90 100"
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "name": "Check Prime or Not",
+    "category": "If-Else + Loop (Easy to Medium)",
+    "level": "Medium",
+    "description": "Given a number N, print 'Yes' if it's a prime number, otherwise print 'No'.\nExample:\nInput: 7\nOutput: Yes\nExplanation: 7 has no divisors other than 1 and itself.",
+    "test_cases": [
+      {
+        "input": "7",
+        "output": "Yes"
+      },
+      {
+        "input": "10",
+        "output": "No"
+      },
+      {
+        "input": "2",
+        "output": "Yes"
+      },
+      {
+        "input": "1",
+        "output": "No"
+      },
+      {
+        "input": "17",
+        "output": "Yes"
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "name": "Reverse Digits of a Number",
+    "category": "If-Else + Loop (Easy to Medium)",
+    "level": "Medium",
+    "description": "Given a number N, reverse its digits.\nExample:\nInput: 123\nOutput: 321\nExplanation: Digits are reversed to 321.",
+    "test_cases": [
+      {
+        "input": "123",
+        "output": "321"
+      },
+      {
+        "input": "100",
+        "output": "1"
+      },
+      {
+        "input": "0",
+        "output": "0"
+      },
+      {
+        "input": "7",
+        "output": "7"
+      },
+      {
+        "input": "908",
+        "output": "809"
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "name": "Print All Divisors of a Number",
+    "category": "If-Else + Loop (Easy to Medium)",
+    "level": "Medium",
+    "description": "Given a number N, print all of its divisors in increasing order.\nExample:\nInput: 6\nOutput: 1 2 3 6\nExplanation: 1,2,3,6 divide 6 exactly.",
+    "test_cases": [
+      {
+        "input": "6",
+        "output": "1 2 3 6"
+      },
+      {
+        "input": "1",
+        "output": "1"
+      },
+      {
+        "input": "10",
+        "output": "1 2 5 10"
+      },
+      {
+        "input": "13",
+        "output": "1 13"
+      },
+      {
+        "input": "100",
+        "output": "1 2 4 5 10 20 25 50 100"
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "name": "Sum of First N Odd Numbers",
+    "category": "If-Else + Loop (Easy to Medium)",
+    "level": "Medium",
+    "description": "Given a number N, find the sum of the first N odd numbers.\nExample:\nInput: 3\nOutput: 9\nExplanation: 1+3+5 = 9",
+    "test_cases": [
+      {
+        "input": "3",
+        "output": "9"
+      },
+      {
+        "input": "1",
+        "output": "1"
+      },
+      {
+        "input": "5",
+        "output": "25"
+      },
+      {
+        "input": "0",
+        "output": "0"
+      },
+      {
+        "input": "10",
+        "output": "100"
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "name": "Find Maximum in N Numbers",
+    "category": "If-Else + Loop (Easy to Medium)",
+    "level": "Medium",
+    "description": "Given N integers, find and print the maximum among them.\nExample:\nInput: 5\n1 9 3 4 2\nOutput: 9\nExplanation: Maximum is 9.",
+    "test_cases": [
+      {
+        "input": "5\n1 9 3 4 2",
+        "output": "9"
+      },
+      {
+        "input": "3\n-1 -2 -3",
+        "output": "-1"
+      },
+      {
+        "input": "1\n100",
+        "output": "100"
+      },
+      {
+        "input": "4\n4 4 4 4",
+        "output": "4"
+      },
+      {
+        "input": "6\n7 2 8 6 9 3",
+        "output": "9"
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "name": "Count Number of Vowels",
+    "category": "If-Else + Loop (Easy to Medium)",
+    "level": "Medium",
+    "description": "Given a lowercase string, count the number of vowels.\nExample:\nInput: hello\nOutput: 2\nExplanation: e and o are vowels.",
+    "test_cases": [
+      {
+        "input": "hello",
+        "output": "2"
+      },
+      {
+        "input": "apple",
+        "output": "2"
+      },
+      {
+        "input": "xyz",
+        "output": "0"
+      },
+      {
+        "input": "aeiou",
+        "output": "5"
+      },
+      {
+        "input": "banana",
+        "output": "3"
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "name": "Check Palindrome Number",
+    "category": "If-Else + Loop (Easy to Medium)",
+    "level": "Medium",
+    "description": "Given an integer N, check whether it is a palindrome number or not. A number is palindrome if it reads the same forward and backward.\nExample:\nInput: 121\nOutput: Yes\nExplanation: 121 is same forward and backward.",
+    "test_cases": [
+      {
+        "input": "121",
+        "output": "Yes"
+      },
+      {
+        "input": "123",
+        "output": "No"
+      },
+      {
+        "input": "0",
+        "output": "Yes"
+      },
+      {
+        "input": "11",
+        "output": "Yes"
+      },
+      {
+        "input": "12321",
+        "output": "Yes"
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "name": "Count Numbers Divisible by K",
+    "category": "If-Else + Loop (Easy to Medium)",
+    "level": "Medium",
+    "description": "Given two integers N and K, count how many numbers from 1 to N are divisible by K.\nExample:\nInput: 10 2\nOutput: 5\nExplanation: Numbers divisible by 2 from 1 to 10 are 2,4,6,8,10.",
+    "test_cases": [
+      {
+        "input": "10 2",
+        "output": "5"
+      },
+      {
+        "input": "15 3",
+        "output": "5"
+      },
+      {
+        "input": "5 6",
+        "output": "0"
+      },
+      {
+        "input": "20 5",
+        "output": "4"
+      },
+      {
+        "input": "7 1",
+        "output": "7"
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "name": "Sum of First N Even Numbers",
+    "category": "If-Else + Loop (Easy to Medium)",
+    "level": "Medium",
+    "description": "Given an integer N, find the sum of the first N even numbers.\nExample:\nInput: 3\nOutput: 12\nExplanation: 2+4+6 = 12.",
+    "test_cases": [
+      {
+        "input": "3",
+        "output": "12"
+      },
+      {
+        "input": "0",
+        "output": "0"
+      },
+      {
+        "input": "1",
+        "output": "2"
+      },
+      {
+        "input": "5",
+        "output": "30"
+      },
+      {
+        "input": "10",
+        "output": "110"
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "name": "Count Factors of a Number",
+    "category": "If-Else + Loop (Easy to Medium)",
+    "level": "Medium",
+    "description": "Given a number N, count how many positive integers divide N exactly.\nExample:\nInput: 6\nOutput: 4\nExplanation: Divisors are 1,2,3,6.",
+    "test_cases": [
+      {
+        "input": "6",
+        "output": "4"
+      },
+      {
+        "input": "1",
+        "output": "1"
+      },
+      {
+        "input": "10",
+        "output": "4"
+      },
+      {
+        "input": "13",
+        "output": "2"
+      },
+      {
+        "input": "100",
+        "output": "9"
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "name": "Find Power of a Number",
+    "category": "If-Else + Loop (Easy to Medium)",
+    "level": "Medium",
+    "description": "Given two integers A and B, calculate A raised to the power B (A^B).\nExample:\nInput: 2 3\nOutput: 8\nExplanation: 2^3 = 2\u00c3\u20142\u00c3\u20142 = 8",
+    "test_cases": [
+      {
+        "input": "2 3",
+        "output": "8"
+      },
+      {
+        "input": "5 0",
+        "output": "1"
+      },
+      {
+        "input": "3 1",
+        "output": "3"
+      },
+      {
+        "input": "1 100",
+        "output": "1"
+      },
+      {
+        "input": "4 4",
+        "output": "256"
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "name": "Find GCD of Two Numbers",
+    "category": "If-Else + Loop (Easy to Medium)",
+    "level": "Medium",
+    "description": "Given two integers A and B, find their greatest common divisor (GCD).\nExample:\nInput: 12 18\nOutput: 6\nExplanation: GCD of 12 and 18 is 6.",
+    "test_cases": [
+      {
+        "input": "12 18",
+        "output": "6"
+      },
+      {
+        "input": "100 25",
+        "output": "25"
+      },
+      {
+        "input": "7 3",
+        "output": "1"
+      },
+      {
+        "input": "9 0",
+        "output": "9"
+      },
+      {
+        "input": "0 5",
+        "output": "5"
+      }
+    ]
+  }
+]
